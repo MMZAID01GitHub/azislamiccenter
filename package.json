@@ -4,6 +4,7 @@
   "homepage": "https://mosabami.github.io/highpoint-masjid",
   "private": true,
   "dependencies": {
+    "@adius/yaml2json": "^1.0.1",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -23,7 +24,8 @@
     "react-markdown": "^8.0.2",
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.2.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yaml2json": "^1.0.2"
   },
   "scripts": {
     "predeploy": "npm run build",

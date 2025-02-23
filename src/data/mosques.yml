@@ -1,14 +1,9 @@
-name: High Point Masjid, West Seattle
+name: Al Zahra Islamic Center
 description: |
-  CHEACS is local charity that runs religious and social activities as well as education training, well fit sports & recreation. We also hold learning sessions for the children, advisory sessions for the local community.
+  Al Zahra Islamic Center of Louisville, Kentucky is an Islamic center dedicating to serving the muslim community in Louisville and the surrounding area. We offer a variety of services including Jummah prayeyrs. We also host community events and activities throughout the year in service of the Quran and the Ahlul Bayt.
 about: |
-  Chadwell Heath Educational and Cultural Society (CHEACS), we are a local registered charity established in 2005 (registration number 1125112) providing religious, educational and social activities for the local community such as sports and recreational activities, educational sessions for children, language classes and events for senior citizens.
-
-  Every six months we hold community events with the wider community and provide food for attendees once a month. Our organization also provides advice surgeries once a week to set an example as great role models, to be of a good character and integrate into the local community.
-
-  We have been serving the local community for the last seventeen years and have grown from strength to strength.
-
-  We are based in Highpoint, 6558 35th Ave SW, Seattle, WA 98126
+  Al Zahra Islamic Center of Louisville was first esablished in Established in 1996 to serve the growing community of followers of the Ahlul Bayt in Louisville, KY. More information on our regular programs can be found on our Facebook at: https://www.facebook.com/Alzaharah/ 
+  4010 Bishop Lane, Louisville, KY 40218, United States.
 content_sections:
   home:
     - title: Prayer times
@@ -23,43 +18,43 @@ content_sections:
         
         **Isha**: 8:15 pm
 
-    - title: Jumma time
-      body: |
-        **Khutbah**: 1:30 pm
+  #   - title: Jumma time
+  #     body: |
+  #       **Khutbah**: 1:30 pm
 
-        **Iqamah**: 2:30 pm
-  events:
-    - title: Upcoming events
-      image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/bbq.jpg
-      body: |
-        **BBQ event**
+  #       **Iqamah**: 2:30 pm
+  # events:
+  #   - title: Upcoming events
+  #     image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/bbq.jpg
+  #     body: |
+  #       **BBQ event**
 
-        **Date**: November 4th 2022
+  #       **Date**: November 4th 2022
 
-        On November 4th 2022, we will be having this great bbq for our community
+  #       On November 4th 2022, we will be having this great bbq for our community
 
-        **Celebration of something**
+  #       **Celebration of something**
 
-        **Date**: November 7th 2022
+  #       **Date**: November 7th 2022
 
-        On November 7th 2022, we will be having another awesome event
+  #       On November 7th 2022, we will be having another awesome event
 
-    - title: Recurring events
-      image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/dhikr.png
+  #   - title: Recurring events
+  #     image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/dhikr.png
       
-      body: |
-        **Friday evening prayers**
+  #     body: |
+  #       **Friday evening prayers**
 
-        Every friday between Maghrib and Ishah we have a prayer event
+  #       Every friday between Maghrib and Ishah we have a prayer event
       
-    - title: Past events
-      image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/eidfitr.jpg
-      body: |
-        **Eid Fitr celebration**
+  #   - title: Past events
+  #     image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/eidfitr.jpg
+  #     body: |
+  #       **Eid Fitr celebration**
 
-        **Date:** May 1st 2022
+  #       **Date:** May 1st 2022
 
-        We had a great event on this day
+  #       We had a great event on this day
 
 branding:
   logo_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/favicon.jpg
@@ -67,42 +62,40 @@ branding:
   primary_color: "#913149"
   larger_logo: true
 team:
-  - name: Ayobami Ayodeji
+  - name: Mohib Zaidi
     role: Site Maintainer
-    image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Ayo.jpg
-  - name: Muhammad
-    role: Member
-    image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Muhammad.jpg
+    # image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Ayo.jpg
+  # - name: Muhammad
+  #   role: Member
+  #   image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Muhammad.jpg
 contact:
   addresses:
-    - 6558 35th Ave SW, Seattle, WA 98126
+    - 4010 Bishop Lane Louisville, KY 40218, United States
   phone_numbers:
-    - name: Chairperson
-      number: "+12062575961"
+    - name: Mohib Zaidi
+      number: "+15027189160"
   email_addresses:
-    - name: General email
-      address: highpointmuslim@gmail.com
+    - name: Mohib Zaidi
+      address: mmohibzaidi@gmail.com
 donation:
   title: Donations
   subtitle: Help build and maintain the society
   description: |
     Your contribution will help us to maintain and develop the wide range of services we offer. Prophet Muhammad ﷺ said: “Allah said: ‘Spend, O son of Adam, and I shall spend on you.’”.
 
-    All donations must be made in GBP (Pound Sterling).
-
     **PLEASE NOTE: All donations are non-refundable. Please speak to a member of the team if you would like further clarification before making a donation.**
 
   link_label: Donate now
   link: '' # https://www.launchgood.com/campaign/chadwell_heath_education_and_cultural_society_cheacs
-charity_information:
-  - label: Charity name
-    value: Chadwell Heath Educational and Cultural Society
-  - label: Charity registration number
-    value: 1125112
-  - label: Date Registered
-    value: 22 July 2008
-  - label: Established in
-    value: 2005
+# charity_information:
+#   - label: Charity name
+#     value: Chadwell Heath Educational and Cultural Society
+#   - label: Charity registration number
+#     value: 1125112
+#   - label: Date Registered
+#     value: 22 July 2008
+#   - label: Established in
+#     value: 2005
 
 pages:
   - name: 'Home'

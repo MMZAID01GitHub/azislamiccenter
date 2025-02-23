@@ -1,104 +1,59 @@
 {
-  "name": "High Point Masjid, West Seattle",
-  "description": "CHEACS is local charity that runs religious and social activities as well as education training, well fit sports & recreation. We also hold learning sessions for the children, advisory sessions for the local community.\n",
-  "about": "Chadwell Heath Educational and Cultural Society (CHEACS), we are a local registered charity established in 2005 (registration number 1125112) providing religious, educational and social activities for the local community such as sports and recreational activities, educational sessions for children, language classes and events for senior citizens.\n\nEvery six months we hold community events with the wider community and provide food for attendees once a month. Our organization also provides advice surgeries once a week to set an example as great role models, to be of a good character and integrate into the local community.\n\nWe have been serving the local community for the last seventeen years and have grown from strength to strength.\n\nWe are based in Highpoint, 6558 35th Ave SW, Seattle, WA 98126\n",
-  "content_sections": {
-    "home": [
-      {
-        "title": "Prayer times",
-        "body": "**Fajr**: 6:15 am\n\n**Zuhr**: 1:30 pm\n\n**Asr**: 4:30 pm\n\n**Maghrib**: 6:50 pm\n\n**Isha**: 8:15 pm\n"
-      },
-      {
-        "title": "Jumma time",
-        "body": "**Khutbah**: 1:30 pm\n\n**Iqamah**: 2:30 pm\n"
-      }
+    "name": "Al Zahra Islamic Center",
+    "description": "Al Zahra Islamic Center of Louisville, Kentucky is an Islamic center dedicating to serving the muslim community in Louisville and the surrounding area. We offer a variety of services including Jummah prayeyrs. We also host community events and activities throughout the year in service of the Quran and the Ahlul Bayt.\n",
+    "about": "Al Zahra Islamic Center of Louisville was first esablished in Established in 1996 to serve the growing community of followers of the Ahlul Bayt in Louisville, KY. More information on our regular programs can be found on our Facebook at: https://www.facebook.com/Alzaharah/ \n4010 Bishop Lane, Louisville, KY 40218, United States.\n",
+    "content_sections": {
+        "home": [
+            {
+                "title": "Prayer times",
+                "body": "**Fajr**: 6:15 am\n\n**Zuhr**: 1:30 pm\n\n**Asr**: 4:30 pm\n\n**Maghrib**: 6:50 pm\n\n**Isha**: 8:15 pm\n"
+            }
+        ]
+    },
+    "branding": {
+        "logo_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/favicon.jpg",
+        "banner_image_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/heropic.png",
+        "primary_color": "#913149",
+        "larger_logo": true
+    },
+    "team": [
+        {
+            "name": "Mohib Zaidi",
+            "role": "Site Maintainer"
+        }
     ],
-    "events": [
-      {
-        "title": "Upcoming events",
-        "image": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/bbq.jpg",
-        "body": "**BBQ event**\n\n**Date**: November 4th 2022\n\nOn November 4th 2022, we will be having this great bbq for our community\n\n**Celebration of something**\n\n**Date**: November 7th 2022\n\nOn November 7th 2022, we will be having another awesome event\n"
-      },
-      {
-        "title": "Recurring events",
-        "image": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/dhikr.png",
-        "body": "**Friday evening prayers**\n\nEvery friday between Maghrib and Ishah we have a prayer event\n"
-      },
-      {
-        "title": "Past events",
-        "image": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/eidfitr.jpg",
-        "body": "**Eid Fitr celebration**\n\n**Date:** May 1st 2022\n\nWe had a great event on this day\n"
-      }
+    "contact": {
+        "addresses": [
+            "4010 Bishop Lane Louisville, KY 40218, United States"
+        ],
+        "phone_numbers": [
+            {
+                "name": "Mohib Zaidi",
+                "number": "+15027189160"
+            }
+        ],
+        "email_addresses": [
+            {
+                "name": "Mohib Zaidi",
+                "address": "mmohibzaidi@gmail.com"
+            }
+        ]
+    },
+    "donation": {
+        "title": "Donations",
+        "subtitle": "Help build and maintain the society",
+        "description": "Your contribution will help us to maintain and develop the wide range of services we offer. Prophet Muhammad \ufdfa said: \u201cAllah said: \u2018Spend, O son of Adam, and I shall spend on you.\u2019\u201d.\n\n**PLEASE NOTE: All donations are non-refundable. Please speak to a member of the team if you would like further clarification before making a donation.**\n",
+        "link_label": "Donate now",
+        "link": ""
+    },
+    "pages": [
+        {
+            "name": "Home",
+            "href": "/home"
+        },
+        {
+            "name": "Events",
+            "href": "/events"
+        }
     ]
-  },
-  "branding": {
-    "logo_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/favicon.jpg",
-    "banner_image_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/heropic.png",
-    "primary_color": "#913149",
-    "larger_logo": true
-  },
-  "team": [
-    {
-      "name": "Ayobami Ayodeji",
-      "role": "Site Maintainer",
-      "image_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Ayo.jpg"
-    },
-    {
-      "name": "Muhammad",
-      "role": "Member",
-      "image_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Muhammad.jpg"
-    }
-  ],
-  "contact": {
-    "addresses": [
-      "6558 35th Ave SW, Seattle, WA 98126"
-    ],
-    "phone_numbers": [
-      {
-        "name": "Chairperson",
-        "number": "+12062575961"
-      }
-    ],
-    "email_addresses": [
-      {
-        "name": "General email",
-        "address": "highpointmuslim@gmail.com"
-      }
-    ]
-  },
-  "donation": {
-    "title": "Donations",
-    "subtitle": "Help build and maintain the society",
-    "description": "Your contribution will help us to maintain and develop the wide range of services we offer. Prophet Muhammad ﷺ said: “Allah said: ‘Spend, O son of Adam, and I shall spend on you.’”.\n\nAll donations must be made in GBP (Pound Sterling).\n\n**PLEASE NOTE: All donations are non-refundable. Please speak to a member of the team if you would like further clarification before making a donation.**\n",
-    "link_label": "Donate now",
-    "link": ""
-  },
-  "charity_information": [
-    {
-      "label": "Charity name",
-      "value": "Chadwell Heath Educational and Cultural Society"
-    },
-    {
-      "label": "Charity registration number",
-      "value": 1125112
-    },
-    {
-      "label": "Date Registered",
-      "value": "22 July 2008"
-    },
-    {
-      "label": "Established in",
-      "value": 2005
-    }
-  ],
-  "pages": [
-    {
-      "name": "Home",
-      "href": "/home"
-    },
-    {
-      "name": "Events",
-      "href": "/events"
-    }
-  ]
 }

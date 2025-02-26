@@ -22,7 +22,8 @@
     "team": [
         {
             "name": "Mohib Zaidi",
-            "role": "Site Maintainer"
+            "role": "Site Maintainer",
+            "image_url": "https://ui-avatars.com/api/?name=Mohib+Zaidi"
         }
     ],
     "contact": {

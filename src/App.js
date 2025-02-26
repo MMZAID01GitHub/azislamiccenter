@@ -10,7 +10,6 @@ import ContentSection from './components/ContentSection'
 import DonationSection from './components/DonationSection'
 import Navigation from './components/Navigation'
 import MosqueBrandingCSS from './components/MoqueBrandingCSS'
-import PrayerTimes from './components/PrayerTimes'
 import Team from './components/Team'
 import mosques from './data/mosques.json'
 import React, { Component } from 'react';
@@ -60,9 +59,11 @@ class App extends Component {
         ? 
         <div>
           <FacebookSection data={this.state} />
-          <PrayerTimes data={this.state} />
+          {/* <PrayerTimes data={this.state} /> */}
+          {/* TODO: Integrate Shia prayer times via some api 
+                    this will be done in the PrayerTimes.js component*/}
           <About data={this.state} />
-          <ContentSection data={this.state.content_sections.home} />
+          {/* <ContentSection data={this.state.content_sections.home} /> */}
           <DonationSection data={this.state} />
           <Team data={this.state} />
           <Contact data={this.state} />

@@ -68,7 +68,8 @@ branding:
 team:
   - name: Mohib Zaidi
     role: Site Maintainer
-    # image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Ayo.jpg
+    image_url: "https://ui-avatars.com/api/?name=Mohib+Zaidi"
+
   # - name: Muhammad
   #   role: Member
   #   image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Muhammad.jpg

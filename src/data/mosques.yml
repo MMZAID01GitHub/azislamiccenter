@@ -4,6 +4,10 @@ description: |
 about: |
   Al Zahra Islamic Center of Louisville was first esablished in Established in 1996 to serve the growing community of followers of the Ahlul Bayt in Louisville, KY. More information on our regular programs can be found on our Facebook at: https://www.facebook.com/Alzaharah/ 
   4010 Bishop Lane, Louisville, KY 40218, United States.
+
+facebook:
+  url: "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAlzaharah&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+
 content_sections:
   home:
     - title: Prayer times

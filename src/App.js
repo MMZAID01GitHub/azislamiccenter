@@ -3,6 +3,7 @@
 // import Head from 'next/head'
 
 import { Helmet } from 'react-helmet';
+import FacebookSection from './components/FacebookSection';
 import About from './components/About'
 import Contact from './components/Contact'
 import ContentSection from './components/ContentSection'
@@ -58,6 +59,7 @@ class App extends Component {
         this.state.route === '/home'
         ? 
         <div>
+          <FacebookSection data={this.state} />
           <PrayerTimes data={this.state} />
           <About data={this.state} />
           <ContentSection data={this.state.content_sections.home} />

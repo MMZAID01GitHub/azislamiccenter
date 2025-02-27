@@ -6,8 +6,8 @@
         "url": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAlzaharah&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
     },
     "branding": {
-        "logo_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/favicon.jpg",
-        "banner_image_url": "https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/heropic.png",
+        "logo_url": "https://github.com/MMZAID01GitHub/azislamiccenter/blob/main/.github/images/azlogo.jpg?raw=true",
+        "banner_image_url": "https://github.com/MMZAID01GitHub/azislamiccenter/blob/main/.github/images/banner.jpg?raw=true",
         "primary_color": "#3d6e41",
         "larger_logo": true
     },

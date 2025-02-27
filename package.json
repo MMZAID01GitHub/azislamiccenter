@@ -1,7 +1,7 @@
 {
-  "name": "highpoint-masjid",
+  "name": "home",
   "version": "0.1.0",
-  "homepage": "https://mosabami.github.io/highpoint-masjid",
+  "homepage": "https://MMZAID01GitHub.github.io/azky",
   "private": true,
   "dependencies": {
     "@adius/yaml2json": "^1.0.1",

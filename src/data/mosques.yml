@@ -61,8 +61,8 @@ facebook:
   #       We had a great event on this day
 
 branding:
-  logo_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/favicon.jpg
-  banner_image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/heropic.png
+  logo_url: https://github.com/MMZAID01GitHub/azislamiccenter/blob/main/.github/images/azlogo.jpg?raw=true
+  banner_image_url: https://github.com/MMZAID01GitHub/azislamiccenter/blob/main/.github/images/banner.jpg?raw=true
   primary_color: "#3d6e41"
   larger_logo: true
 team:
@@ -113,6 +113,6 @@ donation:
 pages:
   - name: 'Home'
     href: '/home'
-  - name: 'Events'
-    href: '/events'
+  # - name: 'Events'
+  #   href: '/events'
 

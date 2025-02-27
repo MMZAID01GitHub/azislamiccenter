@@ -19,6 +19,7 @@ export default function Team(props) {
                       <div className="text-lg leading-6 font-medium space-y-1">
                         <h3>{person.name}</h3>
                         <p className="mosque-website__text--brand">{person.role}</p>
+                        <p className="mosque-website__text--brand">{person.number}</p>
                       </div>
                       {/* <div className="text-lg">
                         <p className="text-gray-500">{person.bio}</p>

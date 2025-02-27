@@ -8,19 +8,19 @@ about: |
 facebook:
   url: "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAlzaharah&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
 
-content_sections:
-  home:
-    - title: Prayer times
-      body: |
-        **Fajr**: 6:15 am
+# content_sections:
+#   home:
+#     - title: Prayer times
+#       body: |
+#         **Fajr**: 6:15 am
 
-        **Zuhr**: 1:30 pm
+#         **Zuhr**: 1:30 pm
         
-        **Asr**: 4:30 pm
+#         **Asr**: 4:30 pm
         
-        **Maghrib**: 6:50 pm
+#         **Maghrib**: 6:50 pm
         
-        **Isha**: 8:15 pm
+#         **Isha**: 8:15 pm
 
   #   - title: Jumma time
   #     body: |
@@ -63,12 +63,18 @@ content_sections:
 branding:
   logo_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/favicon.jpg
   banner_image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/heropic.png
-  primary_color: "#913149"
+  primary_color: "#3d6e41"
   larger_logo: true
 team:
+  - name: Haj Haider Abu Rasheed
+    role: President
+    image_url: "https://ui-avatars.com/api/?name=H+R"
+    number: "(502) 224-2525"
+
   - name: Mohib Zaidi
     role: Site Maintainer
     image_url: "https://ui-avatars.com/api/?name=Mohib+Zaidi"
+    number: "(502) 718-9160" 
 
   # - name: Muhammad
   #   role: Member
@@ -77,7 +83,9 @@ contact:
   addresses:
     - 4010 Bishop Lane Louisville, KY 40218, United States
   phone_numbers:
-    - name: Mohib Zaidi
+    - name: Haj Haider Abu Rasheed
+      number: "+15022242525"
+    - name: Mohib Zaidi 
       number: "+15027189160"
   email_addresses:
     - name: Mohib Zaidi

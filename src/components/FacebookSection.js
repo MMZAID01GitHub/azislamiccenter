@@ -22,7 +22,7 @@ export default function FacebookSection(props) {
           </ReactMarkdown>
         </div>
       </div>
-    </div>)}
+    </div>)
     </>
   )
 }

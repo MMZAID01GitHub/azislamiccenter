@@ -1,7 +1,7 @@
 {
   "name": "home",
   "version": "0.1.0",
-  "homepage": "https://MMZAID01GitHub.github.io/azky",
+  "homepage": "https://MMZAID01GitHub.github.io/",
   "private": true,
   "dependencies": {
     "@adius/yaml2json": "^1.0.1",

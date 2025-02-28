@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown p {
+  @apply mb-4;
+}
+
+.markdown ul {
+  @apply list-inside list-disc mb-4;
+}
+
+.markdown ol {
+  @apply list-inside list-decimal mb-4;
+}
+
+.markdown a {
+  @apply underline;
+}
+
+.markdown h3 {
+  @apply text-xl font-bold mb-4;
+}

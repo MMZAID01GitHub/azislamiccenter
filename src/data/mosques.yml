@@ -1,0 +1,118 @@
+name: Al Zahra Islamic Center
+description: |
+  Al Zahra Islamic Center of Louisville, Kentucky is an Islamic center dedicating to serving the muslim community in Louisville and the surrounding area. We offer a variety of services including Jummah prayeyrs. We also host community events and activities throughout the year in service of the Quran and the Ahlul Bayt.
+about: |
+  Al Zahra Islamic Center of Louisville was first esablished in Established in 1996 to serve the growing community of followers of the Ahlul Bayt in Louisville, KY. More information on our regular programs can be found on our Facebook at: https://www.facebook.com/Alzaharah/ 
+  4010 Bishop Lane, Louisville, KY 40218, United States.
+
+facebook:
+  url: "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAlzaharah&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+
+# content_sections:
+#   home:
+#     - title: Prayer times
+#       body: |
+#         **Fajr**: 6:15 am
+
+#         **Zuhr**: 1:30 pm
+        
+#         **Asr**: 4:30 pm
+        
+#         **Maghrib**: 6:50 pm
+        
+#         **Isha**: 8:15 pm
+
+  #   - title: Jumma time
+  #     body: |
+  #       **Khutbah**: 1:30 pm
+
+  #       **Iqamah**: 2:30 pm
+  # events:
+  #   - title: Upcoming events
+  #     image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/bbq.jpg
+  #     body: |
+  #       **BBQ event**
+
+  #       **Date**: November 4th 2022
+
+  #       On November 4th 2022, we will be having this great bbq for our community
+
+  #       **Celebration of something**
+
+  #       **Date**: November 7th 2022
+
+  #       On November 7th 2022, we will be having another awesome event
+
+  #   - title: Recurring events
+  #     image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/dhikr.png
+      
+  #     body: |
+  #       **Friday evening prayers**
+
+  #       Every friday between Maghrib and Ishah we have a prayer event
+      
+  #   - title: Past events
+  #     image: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/events/eidfitr.jpg
+  #     body: |
+  #       **Eid Fitr celebration**
+
+  #       **Date:** May 1st 2022
+
+  #       We had a great event on this day
+
+branding:
+  logo_url: https://github.com/MMZAID01GitHub/azislamiccenter/blob/main/.github/images/azlogo.jpg?raw=true
+  banner_image_url: https://github.com/MMZAID01GitHub/azislamiccenter/blob/main/.github/images/banner.jpg?raw=true
+  primary_color: "#3d6e41"
+  larger_logo: true
+team:
+  - name: Haj Haider Abu Rasheed
+    role: President
+    image_url: "https://ui-avatars.com/api/?name=H+R"
+    number: "(502) 224-2525"
+
+  - name: Mohib Zaidi
+    role: Site Maintainer
+    image_url: "https://ui-avatars.com/api/?name=Mohib+Zaidi"
+    number: "(502) 718-9160" 
+
+  # - name: Muhammad
+  #   role: Member
+  #   image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Muhammad.jpg
+contact:
+  addresses:
+    - 4010 Bishop Lane Louisville, KY 40218, United States
+  phone_numbers:
+    - name: Haj Haider Abu Rasheed
+      number: "+15022242525"
+    - name: Mohib Zaidi 
+      number: "+15027189160"
+  email_addresses:
+    - name: Mohib Zaidi
+      address: mmohibzaidi@gmail.com
+donation:
+  title: Donations
+  subtitle: Help build and maintain the society
+  description: |
+    Your contribution will help us to maintain and develop the wide range of services we offer. Prophet Muhammad ﷺ said: “Allah said: ‘Spend, O son of Adam, and I shall spend on you.’”.
+
+    **PLEASE NOTE: All donations are non-refundable. Please speak to a member of the team if you would like further clarification before making a donation.**
+
+  link_label: Donate now
+  link: '' # https://www.launchgood.com/campaign/chadwell_heath_education_and_cultural_society_cheacs
+# charity_information:
+#   - label: Charity name
+#     value: Chadwell Heath Educational and Cultural Society
+#   - label: Charity registration number
+#     value: 1125112
+#   - label: Date Registered
+#     value: 22 July 2008
+#   - label: Established in
+#     value: 2005
+
+pages:
+  - name: 'Home'
+    href: '/home'
+  # - name: 'Events'
+  #   href: '/events'
+

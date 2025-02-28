@@ -3,6 +3,7 @@
 // import Head from 'next/head'
 
 import { Helmet } from 'react-helmet';
+import PrayerTimes from './components/PrayerTimes';
 import FacebookSection from './components/FacebookSection';
 import About from './components/About'
 import Contact from './components/Contact'
@@ -29,7 +30,7 @@ class App extends Component {
     this.state = mosques
     this.state.route = '/home'
     this.state.showBanner = true
-    
+
   };
 
   onRouteChange = (route) => {
@@ -59,7 +60,7 @@ class App extends Component {
         ? 
         <div>
           <FacebookSection data={this.state} />
-          {/* <PrayerTimes data={this.state} /> */}
+          <PrayerTimes />
           {/* TODO: Integrate Shia prayer times via some api 
                     this will be done in the PrayerTimes.js component*/}
           <About data={this.state} />

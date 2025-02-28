@@ -75,6 +75,10 @@ team:
     role: Site Maintainer
     image_url: "https://ui-avatars.com/api/?name=Mohib+Zaidi"
     number: "(502) 718-9160" 
+  - name: Syed Zaidi
+    role: Site Maintainer
+    image_url: "https://ui-avatars.com/api/?name=S+Z"
+    number: "(502) 641-8458"
 
   # - name: Muhammad
   #   role: Member

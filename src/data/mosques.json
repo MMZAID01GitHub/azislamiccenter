@@ -1,7 +1,7 @@
 {
     "name": "Al Zahra Islamic Center",
-    "description": "Al Zahra Islamic Center of Louisville, Kentucky is an Islamic center dedicating to serving the muslim community in Louisville and the surrounding area. We offer a variety of services including Jummah prayeyrs. We also host community events and activities throughout the year in service of the Quran and the Ahlul Bayt.\n",
-    "about": "Al Zahra Islamic Center of Louisville was first esablished in Established in 1996 to serve the growing community of followers of the Ahlul Bayt in Louisville, KY. More information on our regular programs can be found on our Facebook at: https://www.facebook.com/Alzaharah/ \n4010 Bishop Lane, Louisville, KY 40218, United States.\n",
+    "description": "Al Zahra Islamic Center of Louisville, Kentucky is an Islamic center dedicating to serving the muslim community in Louisville and the surrounding area. We offer a variety of services including Jummah prayers. We also host community events and activities throughout the year in service of the Quran and the Ahlul Bayt. \n\n مركز الزهراء الإسلامي في لويفيل، كنتاكي، يخدم المجتمع المسلم في المنطقة. نقدم صلاة الجمعة وننظم فعاليات وأنشطة دينية على مدار العام خدمةً للقرآن وأهل البيت\n",
+    "about": "Al Zahra Islamic Center of Louisville was first esablished in Established in 1996 to serve the growing community of followers of the Ahlul Bayt in Louisville, KY. More information on our regular programs can be found on our Facebook at: https://www.facebook.com/Alzaharah/ \n4010 Bishop Lane, Louisville, KY 40218, United States.\n \n مركز الزهراء الإسلامي في لويفيل عام 1996 لخدمة المجتمع المتنامي من أتباع أهل البيت في لويفيل، كنتاكي. يمكنكم العثور على المزيد من المعلومات حول برامجنا المنتظمة على صفحتنا في فيسبوك",
     "facebook": {
         "url": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAlzaharah&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
     },
@@ -54,8 +54,8 @@
     },
     "donation": {
         "title": "Donations",
-        "subtitle": "Help build and maintain the society",
-        "description": "Your contribution will help us to maintain and develop the wide range of services we offer. Prophet Muhammad \ufdfa said: \u201cAllah said: \u2018Spend, O son of Adam, and I shall spend on you.\u2019\u201d.\n\n**PLEASE NOTE: All donations are non-refundable. Please speak to a member of the team if you would like further clarification before making a donation.**\n",
+        "subtitle": "We rely on the generosity of our community to help us maintain the center for you and future generations.",
+        "description": "**نعتمد على كرم مجتمعنا لمساعدتنا في الحفاظ على المركز لكم وللأجيال القادمة.**\n",
         "link_label": "Donate now",
         "link": ""
     },

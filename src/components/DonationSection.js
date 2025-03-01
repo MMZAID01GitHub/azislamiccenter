@@ -22,7 +22,7 @@ export default function DonationSection(props) {
                   <input type="hidden" name="hosted_button_id" value="BW6N2G9DW6QDL" />
                   <input
                     type="image"
-                    src="https://pics.paypal.com/00/s/ZjllMWNmYjAtNDUzZS00ZTM2LWFjYTQtYTMyYTYzYzUwZDdm/file.PNG" 
+                    src="https://pics.paypal.com/00/s/ZDJkZTE0Y2EtOWZjNi00ODg0LTlmNmYtZjdmZjAzYzU5NTk5/file.PNG"
                     border="0"
                     name="submit"
                     title="PayPal - The safer, easier way to pay online!"

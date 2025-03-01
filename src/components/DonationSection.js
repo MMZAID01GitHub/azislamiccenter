@@ -17,49 +17,24 @@ export default function DonationSection(props) {
             </div>
             <div className="mt-8 flex">
               <div className="inline-flex rounded-md shadow">
-                {/* PayPal Donation Button */}
-                <form
-                  action="https://www.paypal.com/ncp/payment/LF9FC4RQ5C3MJ"
-                  method="post"
-                  target="_blank"
-                  style={{
-                    display: 'inline-grid',
-                    justifyItems: 'center',
-                    alignContent: 'start',
-                    gap: '0.5rem',
-                  }}
-                >
+                {/* Updated PayPal Donation Button */}
+                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                  <input type="hidden" name="hosted_button_id" value="BW6N2G9DW6QDL" />
                   <input
-                    type="submit"
-                    value="Donate Now - تبرع ال"
-                    style={{
-                      textAlign: 'center',
-                      border: 'none',
-                      borderRadius: '0.25rem',
-                      minWidth: '11.625rem',
-                      padding: '0 2rem',
-                      height: '2.625rem',
-                      fontWeight: 'bold',
-                      backgroundColor: '#FFD140',
-                      color: '#000000',
-                      fontFamily: '"Helvetica Neue", Arial, sans-serif',
-                      fontSize: '1rem',
-                      lineHeight: '1.25rem',
-                      cursor: 'pointer',
-                    }}
+                    type="image"
+                    src="https://pics.paypal.com/00/s/ZjllMWNmYjAtNDUzZS00ZTM2LWFjYTQtYTMyYTYzYzUwZDdm/file.PNG" 
+                    border="0"
+                    name="submit"
+                    title="PayPal - The safer, easier way to pay online!"
+                    alt="Donate with PayPal button"
                   />
                   <img
-                    src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg"
-                    alt="cards"
+                    alt=""
+                    border="0"
+                    src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                    width="1"
+                    height="1"
                   />
-                  <section>
-                    Powered by{' '}
-                    <img
-                      src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg"
-                      alt="paypal"
-                      style={{ height: '0.875rem', verticalAlign: 'middle' }}
-                    />
-                  </section>
                 </form>
               </div>
             </div>

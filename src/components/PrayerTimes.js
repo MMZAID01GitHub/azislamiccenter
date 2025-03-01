@@ -15,7 +15,33 @@ export default function PrayerTimes() {
       const response = await fetch(apiUrl);
       const data = await response.json();
       if (data && data.data) {
-        setPrayerTimes(data.data.timings);
+        // Filter out Asr, Sunset, Firstthird, and Lastthird
+        const filteredTimings = Object.fromEntries(
+          Object.entries(data.data.timings).filter(
+            ([prayer]) => !["Asr", "Sunset", "Firstthird", "Lastthird",  "Isha"].includes(prayer)
+          )
+        );
+  
+        // Reorder timings to move Imsak after Fajr
+        const reorderedTimings = {};
+        const order = [
+          "Imsak",
+          "Fajr",
+          "Sunrise",
+          "Dhuhr",
+          "Maghrib",
+          "Isha",
+          "Midnight"
+        ];
+        
+        // Add timings in the desired order
+        order.forEach((prayer) => {
+          if (filteredTimings[prayer]) {
+            reorderedTimings[prayer] = filteredTimings[prayer];
+          }
+        });
+  
+        setPrayerTimes(reorderedTimings);
         setLoading(false);
       }
     } catch (error) {

@@ -91,11 +91,8 @@ contact:
   phone_numbers:
     - name: Haj Haider Abu Rasheed
       number: "+15022242525"
-    - name: Mohib Zaidi 
-      number: "+15027189160"
   email_addresses:
-    - name: Mohib Zaidi
-      address: mmohibzaidi@gmail.com
+      address: contact@azky.org
 donation:
   title: Donations
   subtitle: Help build and maintain the society

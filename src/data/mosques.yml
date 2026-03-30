@@ -73,15 +73,6 @@ team:
     image_url: "https://ui-avatars.com/api/?name=H+R"
     number: "(502) 224-2525"
 
-  - name: Mohib Zaidi
-    role: Site Maintainer
-    image_url: "https://ui-avatars.com/api/?name=Mohib+Zaidi"
-    number: "(502) 718-9160" 
-  - name: Syed Zaidi
-    role: Site Maintainer
-    image_url: "https://ui-avatars.com/api/?name=S+Z"
-    number: "(502) 641-8458"
-
   # - name: Muhammad
   #   role: Member
   #   image_url: https://raw.githubusercontent.com/mosabami/highpoint-masjid/main/public/team/Muhammad.jpg
@@ -91,11 +82,10 @@ contact:
   phone_numbers:
     - name: Haj Haider Abu Rasheed
       number: "+15022242525"
-    - name: Mohib Zaidi 
-      number: "+15027189160"
+
   email_addresses:
-    - name: Mohib Zaidi
-      address: mmohibzaidi@gmail.com
+    - name: Contact
+      address: contact@azky.org
 donation:
   title: Donations
   subtitle: Help build and maintain the society

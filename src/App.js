@@ -13,6 +13,7 @@ import Navigation from './components/Navigation'
 import MosqueBrandingCSS from './components/MoqueBrandingCSS'
 import Team from './components/Team'
 import Sol from './components/Sol'
+import HomeTheme from './components/HomeTheme'
 import mosques from './data/mosques.json'
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
@@ -59,17 +60,7 @@ class App extends Component {
       {
         this.state.route === '/home'
         ? 
-        <div>
-          <FacebookSection data={this.state} />
-          <PrayerTimes />
-          {/* TODO: Integrate Shia prayer times via some api 
-                    this will be done in the PrayerTimes.js component*/}
-          <About data={this.state} />
-          {/* <ContentSection data={this.state.content_sections.home} /> */}
-          <DonationSection data={this.state} />
-          <Team data={this.state} />
-          <Contact data={this.state} />
-        </div>
+        <HomeTheme data={this.state} />
         : this.state.route === '/sol'
         ?
         <Sol />

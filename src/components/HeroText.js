@@ -1,37 +1,67 @@
+const MOSQUE_GREEN = "#1a3a2a";
+const MOSQUE_GOLD = "#c9a84c";
+
 export default function HeroText(props) {
   return (
-    <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-      <div className="sm:text-center lg:text-left">
-        <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-          <span className="block xl:inline">Welcome to</span>{' '}
-          <span className="block mosque-website__text--brand">{props.data.name}</span>
+    <main style={{ padding: "clamp(28px, 5vw, 48px) clamp(20px, 5vw, 40px) 40px" }}>
+      <div>
+        {/* Eyebrow label */}
+        <p style={{
+          color: MOSQUE_GOLD,
+          fontWeight: 800,
+          fontSize: 11,
+          letterSpacing: 4,
+          textTransform: "uppercase",
+          margin: "0 0 16px",
+          opacity: 0.9
+        }}>
+          Est. 1996 · Louisville, KY
+        </p>
+
+        {/* Heading */}
+        <h1 style={{
+          fontSize: "clamp(28px, 4vw, 52px)",
+          fontWeight: 900,
+          lineHeight: 1.1,
+          margin: "0 0 20px",
+          color: "#fff"
+        }}>
+          <span style={{ display: "block", fontWeight: 400, fontSize: "0.55em", color: "rgba(255,255,255,0.6)", letterSpacing: 1, marginBottom: 6 }}>
+            Welcome to
+          </span>
+          <span style={{ color: "#fff" }}>{props.data.name}</span>
         </h1>
-        <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+
+        {/* Divider */}
+        <div style={{ width: 56, height: 3, background: MOSQUE_GOLD, borderRadius: 99, margin: "0 0 22px" }} />
+
+        {/* Description */}
+        <p style={{
+          color: "rgba(255,255,255,0.75)",
+          fontSize: 16,
+          lineHeight: 1.8,
+          maxWidth: 420,
+          margin: "0 0 32px"
+        }}>
           {props.data.description}
         </p>
+
+        {/* PayPal donation */}
         {props.data.donation && (
-          <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div className="rounded-md shadow">
-              {/* Updated PayPal Donation Button */}
-              <form action="https://www.paypal.com/donate" method="post" target="_top">
-                <input type="hidden" name="hosted_button_id" value="BW6N2G9DW6QDL" />
-                <input
-                  type="image"
-                  src="https://pics.paypal.com/00/s/ZDJkZTE0Y2EtOWZjNi00ODg0LTlmNmYtZjdmZjAzYzU5NTk5/file.PNG"
-                  border="0"
-                  name="submit"
-                  title="PayPal - The safer, easier way to pay online!"
-                  alt="Donate with PayPal button"
-                />
-                <img
-                  alt=""
-                  border="0"
-                  src="https://www.paypal.com/en_US/i/scr/pixel.gif"
-                  width="1"
-                  height="1"
-                />
-              </form>
-            </div>
+          <div>
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+              <input type="hidden" name="hosted_button_id" value="BW6N2G9DW6QDL" />
+              <input
+                type="image"
+                src="https://pics.paypal.com/00/s/ZDJkZTE0Y2EtOWZjNi00ODg0LTlmNmYtZjdmZjAzYzU5NTk5/file.PNG"
+                border="0"
+                name="submit"
+                title="PayPal - The safer, easier way to pay online!"
+                alt="Donate with PayPal button"
+                style={{ height: 44 }}
+              />
+              <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
           </div>
         )}
       </div>

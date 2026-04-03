@@ -31,122 +31,138 @@ class  Navigation extends Component {
   render() {
     const gaEventTracker = this.useAnalyticsEventTracker('navigate');
     return (
-      // https://larainfo.com/blogs/react-responsive-navbar-menu-with-tailwind-css-example
-    <div> 
-      <nav className="w-full bg-white shadow">
-          <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-              <div>
-                  <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                      {this.props.route === '/sol' ? (
-                        <div style={{ width: 60, height: 60, borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff' }}>
-                          <img
-                            src="/sol-logo.png"
-                            alt="SOL Youth Group"
-                            style={{ width: '150%', height: '150%', objectFit: 'cover', objectPosition: 'center center' }}
-                          />
-                        </div>
-                      ) : (
-                        <a href="https://www.facebook.com/Alzaharah/">
-                          <img
-                            className={`${this.state.branding.larger_logo ? "h-14" : "h-16"} w-auto`}
-                            src={this.state.branding.logo_url}
-                            alt="hero"
-                          />
-                        </a>
-                      )}
-                      <div className="md:hidden">
-                          <button
-                              className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                              onClick={() => console.log("hi")}
-                          >
-                              {(
-                                  <svg
-                                      xmlns="this.state.branding.logo_url"
-                                      className="w-6 h-6"
-                                      viewBox="0 0 20 20"
-                                      fill="currentColor"
-                                  >
-                                      <path
-                                          fillRule="evenodd"
-                                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                          clipRule="evenodd"
-                                      />
-                                  </svg>
-                              ) }
-                          </button>
-                      </div>
-                  </div>
+    <div>
+      {/* ── Top Navigation Bar ── */}
+      <nav style={{
+        background: "#1a3a2a",
+        position: "sticky", top: 0, zIndex: 100,
+        boxShadow: "0 2px 16px rgba(0,0,0,0.35)"
+      }}>
+        {/* ── Top gold shimmer line ── */}
+        <div style={{ height: 2, background: "linear-gradient(90deg, transparent, #c9a84c, transparent)" }} />
+        <div style={{
+          maxWidth: 1100, margin: "0 auto",
+          padding: "0 16px",
+          display: "flex", alignItems: "center",
+          height: 64, gap: 12
+        }}>
+
+          {/* Logo / wordmark */}
+          <div
+            style={{ display: "flex", alignItems: "center", gap: 12, cursor: "pointer", flexShrink: 0 }}
+            onClick={() => {
+              this.props.onRouteChange('/home');
+              this.setState({ showBanner: true });
+            }}
+          >
+            {this.props.route === '/sol' ? (
+              <div style={{
+                width: 42, height: 42, borderRadius: "50%", overflow: "hidden",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                background: "#fff", border: "2px solid #c9a84c", flexShrink: 0
+              }}>
+                <img src="/sol-logo.png" alt="SOL"
+                  style={{ width: "150%", height: "150%", objectFit: "cover", objectPosition: "center" }} />
               </div>
-              <div>
-                  <div
-                      className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                         "block" 
-                      }`}
-                  >
-                      <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-
-                      {this.state.pages.map((item) => (
-
-                    <li className="text-xl text-black-1400 hover:text-red-900 hover:text-italics" key={item.href}>
-                    <p   onClick={() => {
-                      gaEventTracker(item.name)
-                      this.props.onRouteChange(item.href)
-                      item.href === '/home'
-                      ? this.setState({showBanner:true})
-                      : this.setState({showBanner:false}) }}>
-                      {item.name}
-                      </p>
-                    </li>
-
-                  ))}
-
-
-                      </ul>
-                  </div>
+            ) : (
+              <div style={{
+                width: 44, height: 44, borderRadius: "50%", overflow: "hidden",
+                flexShrink: 0, border: "2px solid #c9a84c",
+              }}>
+                <img
+                  src={this.state.branding.logo_url}
+                  alt={this.state.name}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
               </div>
+            )}
+            <span style={{
+              color: "#fff", fontWeight: 800, fontSize: 15,
+              lineHeight: 1.2, display: "flex", flexDirection: "column"
+            }}>
+              <span style={{ color: "#c9a84c", fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase" }}>
+                {this.props.route === '/sol' ? "SOL Youth Group" : "Al Zahrah Islamic Center"}
+              </span>
+              <span style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", fontWeight: 400 }}>
+                {this.props.route === '/sol' ? "Seeds of Light" : "مركز الزهراء الإسلامي"}
+              </span>
+            </span>
           </div>
+
+          {/* Spacer */}
+          <div style={{ flex: 1 }} />
+
+          {/* Nav links */}
+          <ul style={{ display: "flex", alignItems: "center", gap: 4, listStyle: "none", margin: 0, padding: 0, flexShrink: 0, flexWrap: "wrap", justifyContent: "flex-end" }}>
+            {this.state.pages.map((item) => {
+              const isActive = this.props.route === item.href;
+              return (
+                <li key={item.href}>
+                  <button
+                    onClick={() => {
+                      gaEventTracker(item.name);
+                      this.props.onRouteChange(item.href);
+                      item.href === '/home'
+                        ? this.setState({ showBanner: true })
+                        : this.setState({ showBanner: false });
+                    }}
+                    style={{
+                      background: isActive ? "rgba(201,168,76,0.15)" : "transparent",
+                      border: isActive ? "1px solid rgba(201,168,76,0.4)" : "1px solid transparent",
+                      color: isActive ? "#c9a84c" : "rgba(255,255,255,0.75)",
+                      fontWeight: isActive ? 700 : 500,
+                      fontSize: 14,
+                      padding: "7px 16px",
+                      borderRadius: 100,
+                      cursor: "pointer",
+                      transition: "all 0.15s ease",
+                      letterSpacing: 0.3
+                    }}
+                    onMouseEnter={e => {
+                      if (!isActive) {
+                        e.currentTarget.style.background = "rgba(255,255,255,0.08)";
+                        e.currentTarget.style.color = "#fff";
+                      }
+                    }}
+                    onMouseLeave={e => {
+                      if (!isActive) {
+                        e.currentTarget.style.background = "transparent";
+                        e.currentTarget.style.color = "rgba(255,255,255,0.75)";
+                      }
+                    }}
+                  >
+                    {item.name}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+
+        </div>
+        {/* ── Bottom gold shimmer line ── */}
+        <div style={{ height: 2, background: "linear-gradient(90deg, transparent, #c9a84c, transparent)" }} />
       </nav>
 
-      <div className="relative bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-            <svg
-              className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-              fill="currentColor"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <polygon points="50,0 100,0 50,100 0,100" />
-            </svg>
-  
-            <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
-              <nav className="relative flex items-center justify-between sm:h-24 lg:justify-start" aria-label="Global">
-                <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                  <div className="flex items-center justify-between w-full md:w-auto">
-                    <a href={this.state.route}>
-                  
-                        <span className="sr-only">{this.state.name}</span>
-                        {/* <img
-                          className={`${this.state.branding.larger_logo ? "h-32" : "h-16"} w-auto`}
-                          src={this.state.branding.logo_url}
-                          alt="hero"
-                        /> */}
-                     
-                    </a>
-                  </div>
-                </div>
-                <div className="xhidden md:block md:ml-10 pr-4 space-x-8">
-
-                </div>
-              </nav>
-            </div>
+      {this.props.route !== '/sol' && (
+      <div style={{
+        position: "relative",
+        background: "linear-gradient(135deg, #1a3a2a 0%, #0d2118 100%)",
+        overflow: "hidden",
+        minHeight: 320
+      }}>
+        {/* subtle pattern overlay */}
+        <div style={{
+          position: "absolute", inset: 0, zIndex: 0,
+          backgroundImage: "radial-gradient(circle at 20% 50%, rgba(201,168,76,0.07) 0%, transparent 60%)",
+          pointerEvents: "none"
+        }} />
+        <div className="max-w-7xl mx-auto" style={{ position: "relative", zIndex: 1 }}>
+          <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
             {
               this.state.showBanner
               ? <HeroText data={this.state} />
               : console.log("no banner")
             }
-
           </div>
         </div>
         {
@@ -154,7 +170,8 @@ class  Navigation extends Component {
           ?   <HeroBanner data={this.state} />
           : <OtherBanners data={this.state} hide={this.props.route === '/sol'} />
         }
-      </div>  
+      </div>
+      )}
 
   </div>    
   );

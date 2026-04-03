@@ -1,7 +1,7 @@
 {
-    "name": "Al Zahra Islamic Center",
-    "description": "Al Zahra Islamic Center of Louisville, Kentucky is an Islamic center dedicating to serving the muslim community in Louisville and the surrounding area. We offer a variety of services including Jummah prayers. We also host community events and activities throughout the year in service of the Quran and the Ahlul Bayt. \n\n مركز الزهراء الإسلامي في لويفيل، كنتاكي، يخدم المجتمع المسلم في المنطقة. نقدم صلاة الجمعة وننظم فعاليات وأنشطة دينية على مدار العام خدمةً للقرآن وأهل البيت\n",
-    "about": "Al Zahra Islamic Center of Louisville was first esablished in Established in 1996 to serve the growing community of followers of the Ahlul Bayt in Louisville, KY. More information on our regular programs can be found on our Facebook at: https://www.facebook.com/Alzaharah/ \n4010 Bishop Lane, Louisville, KY 40218, United States.\n \n مركز الزهراء الإسلامي في لويفيل عام 1996 لخدمة المجتمع المتنامي من أتباع أهل البيت في لويفيل، كنتاكي. يمكنكم العثور على المزيد من المعلومات حول برامجنا المنتظمة على صفحتنا في فيسبوك",
+    "name": "Al Zahrah Islamic Center",
+    "description": "Al Zahrah Islamic Center of Louisville, Kentucky is an Islamic center dedicating to serving the muslim community in Louisville and the surrounding area. We offer a variety of services including Jummah prayers. We also host community events and activities throughout the year in service of the Quran and the Ahlul Bayt. \n\n مركز الزهراء الإسلامي في لويفيل، كنتاكي، يخدم المجتمع المسلم في المنطقة. نقدم صلاة الجمعة وننظم فعاليات وأنشطة دينية على مدار العام خدمةً للقرآن وأهل البيت\n",
+    "about": "Al Zahrah Islamic Center of Louisville was established in 1996 to serve the growing community of followers of the Ahlul Bayt in Louisville, Kentucky. Since its founding, the center has been dedicated to providing religious, educational, and community programs for individuals and families.\n\nFor more information about our regular programs and events, please visit our Facebook page: https://www.facebook.com/Alzaharah/\n\nتأسس مركز الزهراء الإسلامي في لويفيل عام 1996 لخدمة المجتمع المتنامي من أتباع أهل البيت (عليهم السلام) في مدينة لويفيل، ولاية كنتاكي. ومنذ تأسيسه، يحرص المركز على تقديم البرامج الدينية والتعليمية والاجتماعية لخدمة الأفراد والعوائل.",
     "facebook": {
         "url": "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAlzaharah&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
     },
@@ -15,7 +15,7 @@
         {
             "name": "Haj Haider Abu Rasheed",
             "role": "President",
-            "image_url": "https://ui-avatars.com/api/?name=H+R",
+            "image_url": "https://github.com/MMZAID01GitHub/azislamiccenter/blob/main/.github/images/azlogo.jpg?raw=true",
             "number": "(502) 224-2525"
         }
 
@@ -49,7 +49,7 @@
             "href": "/home"
         },
         {
-            "name": "Sol",
+            "name": "Youth",
             "href": "/sol"
         }
     ]

@@ -7,8 +7,8 @@ const SOL_GOLD = "#c9a84c";
 const SOL_LIGHT_GREEN = "#39e09b";
 
 const responsiveStyles = `
-  .sol-hero { padding: 60px 24px 48px; }
-  .sol-hero h1 { font-size: 36px; }
+  .sol-hero { padding: 56px 24px 52px; }
+  .sol-hero-title { font-size: 36px; font-weight: 900; color: #fff; margin: 0 0 6px; letter-spacing: 1px; }
   .sol-about-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 40px; }
   .sol-quote { padding: 32px 28px; }
   .sol-quote p.text { font-size: 18px; }
@@ -19,12 +19,12 @@ const responsiveStyles = `
     .sol-about-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 600px) {
-    .sol-hero { padding: 40px 16px 36px; }
-    .sol-hero h1 { font-size: 26px; }
+    .sol-hero { padding: 40px 16px 40px; }
+    .sol-hero-title { font-size: 26px; }
     .sol-about-grid { grid-template-columns: 1fr; }
     .sol-quote { padding: 24px 18px; }
     .sol-quote p.text { font-size: 15px; }
-    .sol-instagram-wrap { padding: 0 8px; }
+    .sol-instagram-wrap { padding: 0; }
     .sol-links-card { padding: 24px 16px; max-width: 100%; }
   }
 `;
@@ -450,22 +450,89 @@ export default function Sol() {
   return (
     <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}
          className="bg-white min-h-screen">
-
       <style>{responsiveStyles}</style>
 
       {/* ── HERO BANNER ── */}
       <div className="sol-hero" style={{
-        background: `linear-gradient(135deg, ${SOL_GREEN} 0%, #0d2118 60%, #1a3a2a 100%)`,
+        background: `linear-gradient(160deg, #081910 0%, #0f2b1c 40%, #1a3a2a 100%)`,
         textAlign: "center",
         position: "relative",
         overflow: "hidden"
       }}>
-        {/* decorative circles */}
-        <div style={{ position:"absolute", top:-60, left:-60, width:200, height:200, borderRadius:"50%", background:"rgba(201,168,76,0.08)" }} />
-        <div style={{ position:"absolute", bottom:-40, right:-40, width:160, height:160, borderRadius:"50%", background:"rgba(57,224,155,0.07)" }} />
+
+        {/* ══════════════════════════════════════════════════
+            ISLAMIC PATTERN + AHL AL-BAYT OVERLAY
+            All background layers are z-index 0
+            Foreground (logo/text) is z-index 1
+        ══════════════════════════════════════════════════ */}
+
+        {/* ░░░ BACKGROUND LAYER CONTAINER (z:0) ░░░ */}
+        <div style={{position:"absolute", inset:0, zIndex:0, pointerEvents:"none"}}>
+
+          {/* ── LAYER 1: Tiling 8-pointed star girih pattern ── */}
+          <svg style={{position:"absolute",inset:0,width:"100%",height:"100%",opacity:0.13}}
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="girih" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+                <polygon
+                  points="40,19 46,31 59,27 55,40 59,53 46,49 40,61 34,49 21,53 25,40 21,27 34,31"
+                  fill="none" stroke={SOL_GOLD} strokeWidth="1.2"/>
+                <polygon points="40,0 46,12 40,19 34,12" fill="none" stroke={SOL_GOLD} strokeWidth="0.8"/>
+                <polygon points="80,40 68,34 61,40 68,46" fill="none" stroke={SOL_GOLD} strokeWidth="0.8"/>
+                <polygon points="40,80 34,68 40,61 46,68" fill="none" stroke={SOL_GOLD} strokeWidth="0.8"/>
+                <polygon points="0,40 12,46 19,40 12,34" fill="none" stroke={SOL_GOLD} strokeWidth="0.8"/>
+                <polygon points="0,0 12,0 19,12 12,19 0,12" fill="none" stroke={SOL_GOLD} strokeWidth="0.8"/>
+                <polygon points="80,0 80,12 68,19 61,12 68,0" fill="none" stroke={SOL_GOLD} strokeWidth="0.8"/>
+                <polygon points="0,80 0,68 12,61 19,68 12,80" fill="none" stroke={SOL_GOLD} strokeWidth="0.8"/>
+                <polygon points="80,80 68,80 61,68 68,61 80,68" fill="none" stroke={SOL_GOLD} strokeWidth="0.8"/>
+                <line x1="19" y1="12" x2="27" y2="21" stroke={SOL_GOLD} strokeWidth="0.6"/>
+                <line x1="61" y1="12" x2="53" y2="21" stroke={SOL_GOLD} strokeWidth="0.6"/>
+                <line x1="19" y1="68" x2="27" y2="59" stroke={SOL_GOLD} strokeWidth="0.6"/>
+                <line x1="61" y1="68" x2="53" y2="59" stroke={SOL_GOLD} strokeWidth="0.6"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#girih)"/>
+          </svg>
+
+          {/* ── LAYER 2: Central radial medallion ── */}
+          <svg style={{
+            position:"absolute", top:"50%", left:"50%",
+            transform:"translate(-50%,-50%)",
+            overflow:"visible", opacity:0.22,
+          }} width="420" height="420" viewBox="-210 -210 420 420">
+            <circle r="200" fill="none" stroke={SOL_GOLD} strokeWidth="1" strokeDasharray="8 6"/>
+            <circle r="170" fill="none" stroke={SOL_GOLD} strokeWidth="0.5"/>
+            <circle r="120" fill="none" stroke={SOL_GOLD} strokeWidth="0.8" strokeDasharray="4 4"/>
+            <circle r="82"  fill="none" stroke={SOL_GOLD} strokeWidth="1.5"/>
+            {Array.from({length:16},(_,i)=>{
+              const a=i*22.5*Math.PI/180;
+              return <line key={i}
+                x1={84*Math.sin(a)} y1={-84*Math.cos(a)}
+                x2={168*Math.sin(a)} y2={-168*Math.cos(a)}
+                stroke={SOL_GOLD} strokeWidth="0.8"/>;
+            })}
+            {Array.from({length:8},(_,i)=>{
+              const a=i*45*Math.PI/180;
+              return <circle key={i} cx={188*Math.sin(a)} cy={-188*Math.cos(a)} r="4" fill={SOL_GOLD} opacity="0.9"/>;
+            })}
+            <path d="M -14,-158 A 28,28 0 1,0 14,-158 A 18,18 0 1,1 -14,-158 Z" fill={SOL_GOLD} opacity="0.7"/>
+          </svg>
+
+
+          {/* ── LAYER 4b: Bottom gold shimmer strip ── */}
+          <div style={{
+            position:"absolute", bottom:0, left:0, right:0,
+            height:3,
+            background:`linear-gradient(90deg, transparent, ${SOL_GOLD}70, transparent)`,
+          }}/>
+
+        </div>{/* ░░░ END BACKGROUND ░░░ */}
+
+        {/* ▓▓▓ FOREGROUND CONTENT (z:1) — logo, title, text, button ▓▓▓ */}
+        <div style={{ position:"relative", zIndex:1 }}>
 
         <div style={{
-          width: 150, height: 150, borderRadius: "50%", margin: "0 auto 20px",
+          width: 130, height: 130, borderRadius: "50%", margin: "0 auto 20px",
           overflow: "hidden",
           background: "#ffffff",
           boxShadow: `0 0 0 4px ${SOL_GOLD}, 0 8px 32px rgba(0,0,0,0.4)`,
@@ -475,7 +542,7 @@ export default function Sol() {
             style={{ width: "150%", height: "150%", objectFit: "cover", objectPosition: "center center" }} />
         </div>
 
-        <h1 className="sol-hero" style={{ color:"#fff", fontWeight:900, margin:"0 0 6px", letterSpacing:1, padding:0 }}>
+        <h1 className="sol-hero-title" style={{ padding: 0 }}>
           SOL Youth Group
         </h1>
         <p style={{ color:SOL_GOLD, fontSize:16, fontWeight:600, margin:"0 0 12px", letterSpacing:2, textTransform:"uppercase" }}>
@@ -495,23 +562,14 @@ export default function Sol() {
             }}>
             Follow on Instagram ↗
           </a>
-          <button
-            disabled
-            style={{
-              display:"inline-block",
-              background:"linear-gradient(135deg, #2d6a4f, #1b4332)",
-              color:SOL_GOLD, fontWeight:700, fontSize:14,
-              padding:"11px 30px", borderRadius:100, border:`2px solid ${SOL_GOLD}`,
-              boxShadow:"0 4px 16px rgba(201,168,76,0.20)",
-              cursor:"not-allowed", opacity:0.85
-            }}>
-            💚 Donate
-          </button>
         </div>
-      </div>
+
+        </div>{/* ▓▓▓ END FOREGROUND ▓▓▓ */}
+
+      </div>{/* ── END HERO BANNER ── */}
 
       {/* ── ABOUT SECTION ── */}
-      <div style={{ background:"#f9fafb", padding:"56px 24px" }}>
+      <div style={{ background:"#f5f5f0", padding:"56px 24px" }}>
         <div style={{ maxWidth:800, margin:"0 auto" }}>
 
           {/* Section label */}
@@ -564,6 +622,7 @@ export default function Sol() {
         </div>
       </div>
 
+      <div style={{ background: "#f5f5f0" }}>
       <div className="max-w-4xl mx-auto px-4 pt-10 pb-6">
 
         {/* Official Instagram Profile Embed */}
@@ -695,6 +754,124 @@ export default function Sol() {
         </div>
 
       </div>
+      </div>{/* end cream wrapper */}
+
+    {/* ══════════════════════════════════════════════════
+        SOL PAGE FOOTER
+        Dark green branded footer matching homepage style
+        Includes: logo, tagline, email, Instagram, nav links
+    ══════════════════════════════════════════════════ */}
+    <footer style={{
+      background:`linear-gradient(160deg, #081910 0%, #0f2b1c 50%, ${SOL_GREEN} 100%)`,
+      borderTop:`1px solid ${SOL_GOLD}30`,
+      padding:"0",
+    }}>
+
+      {/* Top gold accent line */}
+      <div style={{height:2, background:`linear-gradient(90deg, transparent, ${SOL_GOLD}, transparent)`}}/>
+
+      <div style={{maxWidth:900, margin:"0 auto", padding:"52px 28px 32px"}}>
+
+        {/* ── Top row: Logo + tagline | Links | Contact ── */}
+        <div style={{
+          display:"grid",
+          gridTemplateColumns:"repeat(auto-fit, minmax(220px, 1fr))",
+          gap:40, marginBottom:44
+        }}>
+
+          {/* Column 1 — Brand */}
+          <div>
+            <div style={{display:"flex", alignItems:"center", gap:14, marginBottom:16}}>
+              <div style={{
+                width:50, height:50, borderRadius:"50%",
+                background:"#fff", border:`2px solid ${SOL_GOLD}`,
+                display:"flex", alignItems:"center", justifyContent:"center",
+                overflow:"hidden", flexShrink:0,
+              }}>
+                <img src="/sol-logo.png" alt="SOL"
+                  style={{width:"150%", height:"150%", objectFit:"cover", objectPosition:"center"}}/>
+              </div>
+              <div>
+                <div style={{color:SOL_GOLD, fontWeight:800, fontSize:15, lineHeight:1.2}}>SOL Youth Group</div>
+                <div style={{color:"rgba(255,255,255,0.45)", fontSize:12}}>Seeds of Light</div>
+              </div>
+            </div>
+            <p style={{color:"rgba(255,255,255,0.5)", fontSize:13, lineHeight:1.7, margin:"0 0 20px"}}>
+              A community of young Shia Muslims in Louisville, Kentucky — growing together in faith, knowledge, and community.
+            </p>
+            {/* Social buttons */}
+            <div style={{display:"flex", gap:10, flexWrap:"wrap"}}>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" style={{
+                display:"inline-flex", alignItems:"center", gap:6,
+                background:"linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)",
+                color:"#fff", fontWeight:700, fontSize:12,
+                padding:"7px 16px", borderRadius:100, textDecoration:"none",
+              }}>📸 Instagram</a>
+              <a href="mailto:contact@azky.org" style={{
+                display:"inline-flex", alignItems:"center", gap:6,
+                background:`rgba(201,168,76,0.12)`,
+                border:`1px solid ${SOL_GOLD}55`,
+                color:SOL_GOLD, fontWeight:700, fontSize:12,
+                padding:"7px 16px", borderRadius:100, textDecoration:"none",
+              }}>✉️ Email Us</a>
+            </div>
+          </div>
+
+          {/* Column 2 — Quick Links */}
+          <div>
+            <p style={{
+              color:SOL_GOLD, fontWeight:800, fontSize:11,
+              letterSpacing:3, textTransform:"uppercase", margin:"0 0 18px"
+            }}>Quick Links</p>
+            {[
+              {label:"🏠 Back to Home",     href:"/home"},
+              {label:"📖 Presentations",    href:"https://linktr.ee/shiaoflouisvilleyouth", external:true},
+              {label:"❓ Ask a Question",   href:"https://forms.gle/hqSRBqfvkr3VHBrF7", external:true},
+              {label:"💬 Send Feedback",    href:"https://forms.gle/XVq9RWaBi8hb8ozn7", external:true},
+              {label:"📸 Follow Us",        href:INSTAGRAM_URL, external:true},
+            ].map(link => (
+              link.external
+                ? <a key={link.label} href={link.href} target="_blank" rel="noreferrer" style={{
+                    display:"block", color:"rgba(255,255,255,0.6)", fontSize:13,
+                    textDecoration:"none", padding:"5px 0",
+                    borderBottom:"1px solid rgba(255,255,255,0.06)",
+                    transition:"color 0.15s",
+                  }}
+                  onMouseEnter={e=>e.currentTarget.style.color=SOL_GOLD}
+                  onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,0.6)"}
+                  >{link.label}</a>
+                : <button key={link.label} onClick={()=>window.dispatchEvent(new CustomEvent('sol-navigate',{detail:link.href}))}
+                    style={{
+                      display:"block", width:"100%", textAlign:"left",
+                      color:"rgba(255,255,255,0.6)", fontSize:13, background:"none",
+                      border:"none", borderBottom:"1px solid rgba(255,255,255,0.06)",
+                      padding:"5px 0", cursor:"pointer", transition:"color 0.15s",
+                    }}
+                    onMouseEnter={e=>e.currentTarget.style.color=SOL_GOLD}
+                    onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,0.6)"}
+                  >{link.label}</button>
+            ))}
+          </div>
+
+        </div>
+
+        {/* ── Divider ── */}
+        <div style={{height:1, background:`linear-gradient(90deg, transparent, ${SOL_GOLD}40, transparent)`, marginBottom:24}}/>
+
+        {/* ── Bottom row: copyright + Bismillah ── */}
+        <div style={{
+          display:"flex", alignItems:"center", justifyContent:"space-between",
+          flexWrap:"wrap", gap:12,
+        }}>
+          <p style={{color:"rgba(255,255,255,0.3)", fontSize:12, margin:0}}>
+            © 2021 SOL Youth Group — Al Zahrah Islamic Center, Louisville KY
+          </p>
+        </div>
+
+      </div>
+      {/* ── Bottom gold shimmer line ── */}
+      <div style={{height:2, background:`linear-gradient(90deg, transparent, ${SOL_GOLD}, transparent)`}}/>
+    </footer>
     </div>
   );
 }

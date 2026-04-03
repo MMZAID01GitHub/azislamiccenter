@@ -35,15 +35,39 @@ export default function HeroText(props) {
         {/* Divider */}
         <div style={{ width: 56, height: 3, background: MOSQUE_GOLD, borderRadius: 99, margin: "0 0 22px" }} />
 
-        {/* Description */}
+        {/* Description — English */}
         <p style={{
           color: "rgba(255,255,255,0.75)",
-          fontSize: 16,
+          fontSize: 15,
           lineHeight: 1.8,
           maxWidth: 420,
-          margin: "0 0 32px"
+          margin: "0 0 14px"
         }}>
-          {props.data.description}
+          <strong style={{ color: "#fff" }}>Al Zahrah Islamic Center of Louisville, Kentucky</strong> is an
+          Islamic center dedicated to serving the Muslim community in Louisville and the surrounding area.
+          We offer a variety of services including <strong style={{ color: MOSQUE_GOLD }}>Jumu'ah prayers</strong>.
+          We also host community events and activities throughout the year in service of the{" "}
+          <strong style={{ color: MOSQUE_GOLD }}>Quran and the Ahlul Bayt</strong>.
+        </p>
+
+        {/* Mini gold divider */}
+        <div style={{ width: 32, height: 1, background: `linear-gradient(to right, ${MOSQUE_GOLD}, transparent)`, margin: "0 0 14px" }} />
+
+        {/* Description — Arabic */}
+        <p style={{
+          color: "rgba(255,255,255,0.6)",
+          fontSize: 14,
+          lineHeight: 1.9,
+          maxWidth: 420,
+          margin: "0 0 28px",
+          direction: "rtl",
+          textAlign: "right",
+          fontFamily: "'Georgia','Times New Roman',serif",
+        }}>
+          <strong style={{ color: "rgba(255,255,255,0.85)" }}>مركز الزهراء الإسلامي</strong> في لويفيل،
+          كنتاكي، يخدم المجتمع المسلم في المنطقة. نقدم{" "}
+          <strong style={{ color: MOSQUE_GOLD }}>صلاة الجمعة</strong>{" "}
+          وننظم فعاليات وأنشطة دينية على مدار العام خدمةً للقرآن وأهل البيت.
         </p>
 
         {/* PayPal donation */}

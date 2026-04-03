@@ -464,9 +464,16 @@ export default function Sol() {
         <div style={{ position:"absolute", top:-60, left:-60, width:200, height:200, borderRadius:"50%", background:"rgba(201,168,76,0.08)" }} />
         <div style={{ position:"absolute", bottom:-40, right:-40, width:160, height:160, borderRadius:"50%", background:"rgba(57,224,155,0.07)" }} />
 
-        <img src="/sol-logo.png" alt="SOL Youth Group"
-          style={{ width:110, height:110, borderRadius:"50%", objectFit:"cover", margin:"0 auto 20px",
-            boxShadow:`0 0 0 4px ${SOL_GOLD}, 0 8px 32px rgba(0,0,0,0.4)` }} />
+        <div style={{
+          width: 150, height: 150, borderRadius: "50%", margin: "0 auto 20px",
+          overflow: "hidden",
+          background: "#ffffff",
+          boxShadow: `0 0 0 4px ${SOL_GOLD}, 0 8px 32px rgba(0,0,0,0.4)`,
+          display: "flex", alignItems: "center", justifyContent: "center"
+        }}>
+          <img src="/sol-logo.png" alt="SOL Youth Group"
+            style={{ width: "150%", height: "150%", objectFit: "cover", objectPosition: "center center" }} />
+        </div>
 
         <h1 className="sol-hero" style={{ color:"#fff", fontWeight:900, margin:"0 0 6px", letterSpacing:1, padding:0 }}>
           SOL Youth Group

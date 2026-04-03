@@ -12,6 +12,7 @@ import DonationSection from './components/DonationSection'
 import Navigation from './components/Navigation'
 import MosqueBrandingCSS from './components/MoqueBrandingCSS'
 import Team from './components/Team'
+import Sol from './components/Sol'
 import mosques from './data/mosques.json'
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
@@ -54,7 +55,7 @@ class App extends Component {
 
 
       <MosqueBrandingCSS data={this.state} />
-      <Navigation data={this.state} onRouteChange={this.onRouteChange} showBanner = {this.state.showBanner} />
+      <Navigation data={this.state} onRouteChange={this.onRouteChange} showBanner={this.state.showBanner} route={this.state.route} />
       {
         this.state.route === '/home'
         ? 
@@ -69,7 +70,10 @@ class App extends Component {
           <Team data={this.state} />
           <Contact data={this.state} />
         </div>
-        : 
+        : this.state.route === '/sol'
+        ?
+        <Sol />
+        :
         <div>
           <ContentSection data={this.state.content_sections.events} />
         </div>

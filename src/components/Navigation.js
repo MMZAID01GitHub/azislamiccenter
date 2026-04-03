@@ -37,13 +37,23 @@ class  Navigation extends Component {
           <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
               <div>
                   <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                      <a href="https://www.facebook.com/Alzaharah/">
-                      <img
-                          className={`${this.state.branding.larger_logo ? "h-14" : "h-16"} w-auto`}
-                          src={this.state.branding.logo_url}
-                          alt="hero"
-                        />
-                      </a>
+                      {this.props.route === '/sol' ? (
+                        <div style={{ width: 60, height: 60, borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff' }}>
+                          <img
+                            src="/sol-logo.png"
+                            alt="SOL Youth Group"
+                            style={{ width: '150%', height: '150%', objectFit: 'cover', objectPosition: 'center center' }}
+                          />
+                        </div>
+                      ) : (
+                        <a href="https://www.facebook.com/Alzaharah/">
+                          <img
+                            className={`${this.state.branding.larger_logo ? "h-14" : "h-16"} w-auto`}
+                            src={this.state.branding.logo_url}
+                            alt="hero"
+                          />
+                        </a>
+                      )}
                       <div className="md:hidden">
                           <button
                               className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -142,7 +152,7 @@ class  Navigation extends Component {
         {
           this.state.showBanner === true
           ?   <HeroBanner data={this.state} />
-          : <OtherBanners data={this.state} />
+          : <OtherBanners data={this.state} hide={this.props.route === '/sol'} />
         }
       </div>  
 

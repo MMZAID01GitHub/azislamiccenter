@@ -1,4 +1,4 @@
-# Highpoint Masjid Website
+*Note to self: to deploy use the npm command
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It hosts the code used to build the Highpoint Masjid in Highpoint, West Seattle. This website will be used as a templated to build other free mosque websites in the future. It is loosely based on [Mosque Screen's](https://github.com/Mosque-Screens) [Mosque website](https://github.com/Mosque-Screens/mosque.website) but converted to react and having some lifecycle improvments added to make it easy for mosques to host their free website on GitHub Pages.
 

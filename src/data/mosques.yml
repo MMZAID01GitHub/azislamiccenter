@@ -82,9 +82,7 @@ contact:
   phone_numbers:
     - name: Haj Haider Abu Rasheed
       number: "+15022242525"
-
   email_addresses:
-    - name: Contact
       address: contact@azky.org
 donation:
   title: Donations

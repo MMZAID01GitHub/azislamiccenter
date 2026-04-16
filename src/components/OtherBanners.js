@@ -1,4 +1,5 @@
 export default function OtherBanners (props) {
+    if (props.hide) return null;
     return (
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <img

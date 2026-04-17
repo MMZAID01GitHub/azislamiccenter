@@ -1,4 +1,3 @@
-const MOSQUE_GREEN = "#1a3a2a";
 const MOSQUE_GOLD = "#c9a84c";
 
 export default function HeroText(props) {

@@ -1,8 +1,5 @@
 import { useState } from "react";
 
-const MOSQUE_GREEN = "#1a3a2a";
-const MOSQUE_GOLD = "#c9a84c";
-
 const YOUTUBE_URL = "https://www.youtube.com/@al-zahrahislamiccenterkyus";
 
 export default function FacebookSection(props) {
@@ -71,6 +68,7 @@ export default function FacebookSection(props) {
               style={{ border: "none", overflow: "hidden", maxWidth: "100%" }}
               scrolling="no" frameBorder="0" allowFullScreen={true}
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              title="Al Zahrah Facebook Page"
             />
           </div>
         </div>

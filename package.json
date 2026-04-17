@@ -1,7 +1,7 @@
 {
   "name": "home",
   "version": "0.1.0",
-  "homepage": "https://www.azky.org",
+  "homepage": "https://MMZAID01GitHub.github.io/azislamiccenter",
   "private": true,
   "dependencies": {
     "@adius/yaml2json": "^1.0.1",

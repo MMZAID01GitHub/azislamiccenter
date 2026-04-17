@@ -7,13 +7,12 @@ export default function HeroText(props) {
       <div>
         {/* Eyebrow label */}
         <p style={{
-          color: MOSQUE_GOLD,
-          fontWeight: 800,
-          fontSize: 11,
-          letterSpacing: 4,
+          color: "rgba(255,255,255,0.93)",
+          fontWeight: 600,
+          fontSize: 9,
+          letterSpacing: 3,
           textTransform: "uppercase",
           margin: "0 0 16px",
-          opacity: 0.9
         }}>
           Est. 1996 · Louisville, KY
         </p>
@@ -26,18 +25,26 @@ export default function HeroText(props) {
           margin: "0 0 20px",
           color: "#fff"
         }}>
-          <span style={{ display: "block", fontWeight: 400, fontSize: "0.55em", color: "rgba(255,255,255,0.6)", letterSpacing: 1, marginBottom: 6 }}>
+          <span style={{
+            display: "block",
+            fontWeight: 500, fontSize: "0.48em",
+            color: "#c9a84c",
+            letterSpacing: 3,
+            textTransform: "uppercase",
+            marginBottom: 10,
+            paddingBottom: 8,
+          }}>
             Welcome to
           </span>
-          <span style={{ color: "#fff" }}>{props.data.name}</span>
+          <span style={{ display: "block", color: "#fff" }}>{props.data.name}</span>
         </h1>
 
         {/* Divider */}
-        <div style={{ width: 56, height: 3, background: MOSQUE_GOLD, borderRadius: 99, margin: "0 0 22px" }} />
+        <div style={{ width: 90, height: 3, background: `linear-gradient(to right, ${MOSQUE_GOLD}, transparent)`, borderRadius: 99, margin: "0 0 22px" }} />
 
         {/* Description — English */}
         <p style={{
-          color: "rgba(255,255,255,0.75)",
+          color: "rgba(255,255,255,0.93)",
           fontSize: 15,
           lineHeight: 1.8,
           maxWidth: 420,
@@ -51,11 +58,11 @@ export default function HeroText(props) {
         </p>
 
         {/* Mini gold divider */}
-        <div style={{ width: 32, height: 1, background: `linear-gradient(to right, ${MOSQUE_GOLD}, transparent)`, margin: "0 0 14px" }} />
+        <div style={{ width: 120, height: 1, background: `linear-gradient(to right, ${MOSQUE_GOLD}, transparent)`, margin: "0 0 14px" }} />
 
         {/* Description — Arabic */}
         <p style={{
-          color: "rgba(255,255,255,0.6)",
+          color: "rgba(255,255,255,0.88)",
           fontSize: 14,
           lineHeight: 1.9,
           maxWidth: 420,

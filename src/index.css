@@ -9,9 +9,29 @@
 html, body {
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+}
+
+/* Prevent layout shift on images */
+img[width], img[height] {
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Prevent text overflow on small screens */
+  p, h1, h2, h3, h4, span {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
 }

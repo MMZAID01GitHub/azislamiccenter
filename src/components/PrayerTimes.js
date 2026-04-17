@@ -58,14 +58,14 @@ export default function PrayerTimes() {
     <div id="prayertimes" className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
-          <p className="mt-2 text-sm text-gray-700">
+          <p className="mt-2 text-sm text-gray-800">
             Daily prayer times for Louisville, KY (Ja'fari Method)
           </p>
         </div>
       </div>
 
       {loading ? (
-        <p className="mt-4 text-center text-gray-600">Loading prayer times...</p>
+        <p className="mt-4 text-center text-gray-700">Loading prayer times...</p>
       ) : (
         <div className="mt-8 flex flex-col">
           <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -82,7 +82,7 @@ export default function PrayerTimes() {
                     {Object.entries(prayerTimes).map(([prayer, time]) => (
                       <tr key={prayer} className="border-t border-gray-200">
                         <td className="px-3 py-4 text-sm font-medium text-gray-900">{prayer}</td>
-                        <td className="px-3 py-4 text-sm text-gray-500">{time}</td>
+                        <td className="px-3 py-4 text-sm text-gray-700">{time}</td>
                       </tr>
                     ))}
                   </tbody>

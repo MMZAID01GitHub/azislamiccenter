@@ -3,17 +3,11 @@
 // import Head from 'next/head'
 
 import { Helmet } from 'react-helmet';
-import PrayerTimes from './components/PrayerTimes';
-import FacebookSection from './components/FacebookSection';
-import About from './components/About'
-import Contact from './components/Contact'
-import ContentSection from './components/ContentSection'
-import DonationSection from './components/DonationSection'
 import Navigation from './components/Navigation'
 import MosqueBrandingCSS from './components/MoqueBrandingCSS'
-import Team from './components/Team'
 import Sol from './components/Sol'
 import HomeTheme from './components/HomeTheme'
+import ContentSection from './components/ContentSection'
 import mosques from './data/mosques.json'
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
@@ -36,13 +30,8 @@ class App extends Component {
   };
 
   onRouteChange = (route) => {
-    route === '/home'
-    ? this.setState({ showBanner: true })
-    : this.setState({showBanner: false});
-    this.setState({ route: route });
-    console.log(this.state.route)
-    console.log("new state",this.state.showBanner)
-    // console.log(this.state.showBanner)
+    const showBanner = route === '/home';
+    this.setState({ route, showBanner });
   }
 
   render() {

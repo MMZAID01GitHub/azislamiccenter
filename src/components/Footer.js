@@ -25,7 +25,7 @@ export default function Footer({ data, showContact = false }) {
             Get In Touch
           </h2>
           <div style={{ width: 48, height: 3, background: MOSQUE_GOLD, borderRadius: 99, margin: "0 auto 16px" }} />
-          <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 15, margin: 0 }}>
+          <p style={{ color: "rgba(255,255,255,0.78)", fontSize: 15, margin: 0 }}>
             We'd love to hear from you
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function Footer({ data, showContact = false }) {
                 <div>
                   <h3 style={{ color: "#fff", fontWeight: 700, fontSize: 14, margin: "0 0 3px" }}>{person.name}</h3>
                   <p style={{ color: MOSQUE_GOLD, fontSize: 11, margin: "0 0 4px" }}>{person.role}</p>
-                  {person.number && <a href={`tel:${person.number}`} style={{ color: "rgba(255,255,255,0.5)", fontSize: 11, textDecoration: "none" }}>📞 {person.number}</a>}
+                  {person.number && <a href={`tel:${person.number}`} style={{ color: "rgba(255,255,255,0.75)", fontSize: 11, textDecoration: "none" }}>📞 {person.number}</a>}
                 </div>
               </div>
             ))}
@@ -117,7 +117,7 @@ export default function Footer({ data, showContact = false }) {
                 <p style={{ color: "#fff", fontWeight: 800, fontSize: 15, margin: 0 }}>
                   {data?.name || "Al Zahrah Islamic Center"}
                 </p>
-                <p style={{ color: "rgba(255,255,255,0.35)", fontSize: 11, margin: 0 }}>
+                <p style={{ color: "rgba(255,255,255,0.68)", fontSize: 11, margin: 0 }}>
                   Established 1996 · Louisville, KY
                 </p>
               </div>
@@ -143,17 +143,28 @@ export default function Footer({ data, showContact = false }) {
                 </svg>
                 Facebook
               </a>
+              <a href="https://www.youtube.com/@al-zahrahislamiccenterkyus" target="_blank" rel="noreferrer"
+                style={{
+                  display: "inline-flex", alignItems: "center", gap: 7,
+                  background: "#ff0000", color: "#fff", fontWeight: 600,
+                  fontSize: 13, padding: "8px 16px", borderRadius: 100, textDecoration: "none"
+                }}>
+                <svg width="16" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                YouTube
+              </a>
             </div>
           </div>
 
           {/* Right: address + map */}
           <div style={{ flex: "1 1 240px", minWidth: 0 }}>
-            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, margin: "0 0 10px", display: "flex", alignItems: "center", gap: 6 }}>
+            <p style={{ color: "rgba(255,255,255,0.72)", fontSize: 12, margin: "0 0 10px", display: "flex", alignItems: "center", gap: 6 }}>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=4010+Bishop+Lane+Louisville+KY+40218"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ color: "rgba(255,255,255,0.65)", textDecoration: "none", display: "flex", alignItems: "center", gap: 6 }}
+                style={{ color: "rgba(255,255,255,0.88)", textDecoration: "none", display: "flex", alignItems: "center", gap: 6 }}
               >
                 <span>📍</span> 4010 Bishop Lane, Louisville, KY 40218 ↗
               </a>
@@ -171,7 +182,7 @@ export default function Footer({ data, showContact = false }) {
 
         {/* ── Copyright ── */}
         <div style={{ height: 1, background: `linear-gradient(90deg, transparent, ${MOSQUE_GOLD}40, transparent)`, margin: "28px 0 20px" }} />
-        <p style={{ color: "rgba(255,255,255,0.2)", fontSize: 11, margin: "0 0 28px", textAlign: "center", letterSpacing: 0.5 }}>
+        <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 11, margin: "0 0 28px", textAlign: "center", letterSpacing: 0.5 }}>
           © 1996 {data?.name}. All rights reserved.
         </p>
 

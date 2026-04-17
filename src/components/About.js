@@ -15,7 +15,7 @@ export default function About(props) {
               of the Ahlul Bayt in Louisville, Kentucky. Since its founding, the center has been dedicated
               to providing religious, educational, and community programs for individuals and families.
             </p>
-            <p style={{ color:"#6b7280", fontSize:14, lineHeight:1.7, margin:"0 0 28px", textAlign:"center" }}>
+            <p style={{ color:"#374151", fontSize:14, lineHeight:1.7, margin:"0 0 28px", textAlign:"center" }}>
               For more information about our regular programs and events, please visit our{" "}
               <a
                 href="https://www.facebook.com/Alzaharah/"
@@ -27,9 +27,8 @@ export default function About(props) {
 
             {/* Divider */}
             <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:24 }}>
-              <div style={{ flex:1, height:1, background:`linear-gradient(to right, transparent, ${GOLD}40)` }} />
-              <span style={{ color:GOLD, fontSize:16, opacity:0.7, fontFamily:"Georgia,serif" }}>🌙</span>
-              <div style={{ flex:1, height:1, background:`linear-gradient(to left, transparent, ${GOLD}40)` }} />
+              <div style={{ flex:1, height:1, background:`linear-gradient(to right, transparent, ${GOLD}90)` }} />
+              <div style={{ flex:1, height:1, background:`linear-gradient(to left, transparent, ${GOLD}90)` }} />
             </div>
 
             {/* Arabic block */}

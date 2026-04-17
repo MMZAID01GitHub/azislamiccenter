@@ -48,12 +48,15 @@ const themeStyles = `
   .home-theme-wrap #FacebookSection {
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
     padding: 36px 32px;
     border-left: 5px solid #1877f2;
   }
   .home-theme-wrap #FacebookSection h2 {
     color: ${MOSQUE_GREEN} !important;
+  }
+  @media (max-width: 600px) {
+    .home-theme-wrap #donate { border-radius: 12px; padding: 28px 20px !important; }
+    .home-theme-wrap #FacebookSection { padding: 20px 16px; border-radius: 12px; }
   }
 `;
 

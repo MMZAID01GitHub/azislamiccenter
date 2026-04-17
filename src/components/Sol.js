@@ -20,7 +20,9 @@ const responsiveStyles = `
     .sol-hero-title { font-size: 26px; }
     .sol-about-grid { grid-template-columns: 1fr; }
     .sol-instagram-wrap { padding: 0; }
-    .sol-links-card { padding: 24px 16px; max-width: 100%; }
+    .sol-links-card { padding: 24px 16px; max-width: 100%; box-shadow: none !important; }
+    .sol-about-grid > div { box-shadow: none !important; }
+    * { -webkit-tap-highlight-color: transparent; }
   }
 `;
 
@@ -139,7 +141,7 @@ export default function Sol() {
         <p style={{ color:SOL_GOLD, fontSize:16, fontWeight:600, margin:"0 0 12px", letterSpacing:2, textTransform:"uppercase" }}>
           Shia of Louisville
         </p>
-        <p style={{ color:"rgba(255,255,255,0.7)", fontSize:15, maxWidth:480, margin:"0 auto 28px", lineHeight:1.6 }}>
+        <p style={{ color:"rgba(255,255,255,0.92)", fontSize:15, maxWidth:480, margin:"0 auto 28px", lineHeight:1.6 }}>
           A community of young Shia Muslims in Louisville, Kentucky — growing together in faith, knowledge, and community.
         </p>
         <div style={{ display:"flex", gap:16, justifyContent:"center", flexWrap:"wrap" }}>
@@ -185,7 +187,7 @@ export default function Sol() {
               }}>
                 <div style={{ fontSize:32, marginBottom:12 }}>{card.icon}</div>
                 <h3 style={{ color:SOL_GREEN, fontWeight:800, fontSize:17, margin:"0 0 8px" }}>{card.title}</h3>
-                <p style={{ color:"#6b7280", fontSize:14, lineHeight:1.65, margin:0 }}>{card.body}</p>
+                <p style={{ color:"#374151", fontSize:14, lineHeight:1.65, margin:0 }}>{card.body}</p>
               </div>
             ))}
           </div>
@@ -253,7 +255,7 @@ export default function Sol() {
               <span style={{ color: "#fff", fontWeight: 700, fontSize: 13 }}>SOL Youth Group</span>
             </div>
             <h3 style={{ fontSize: 22, fontWeight: 800, color: "#262626", margin: 0 }}>SOL Youth Group Links</h3>
-            <p style={{ color: "#8e8e8e", fontSize: 14, marginTop: 4 }}>All our resources in one place</p>
+            <p style={{ color: "#555", fontSize: 14, marginTop: 4 }}>All our resources in one place</p>
           </div>
 
           {/* Links Container */}
@@ -314,7 +316,7 @@ export default function Sol() {
             ))}
 
             {/* Footer */}
-            <p style={{ textAlign: "center", marginTop: 20, marginBottom: 0, fontSize: 12, color: "rgba(255,255,255,0.35)" }}>
+            <p style={{ textAlign: "center", marginTop: 20, marginBottom: 0, fontSize: 12, color: "rgba(255,255,255,0.65)" }}>
               Powered by{" "}
               <a href="https://linktr.ee/shiaoflouisvilleyouth" target="_blank" rel="noreferrer"
                  style={{ color: "#39e09b", textDecoration: "none" }}>
@@ -364,10 +366,10 @@ export default function Sol() {
               </div>
               <div>
                 <div style={{color:SOL_GOLD, fontWeight:800, fontSize:15, lineHeight:1.2}}>SOL Youth Group</div>
-                <div style={{color:"rgba(255,255,255,0.45)", fontSize:12}}>Seeds of Light</div>
+                <div style={{color:"rgba(255,255,255,0.75)", fontSize:12}}>Seeds of Light</div>
               </div>
             </div>
-            <p style={{color:"rgba(255,255,255,0.5)", fontSize:13, lineHeight:1.7, margin:"0 0 20px"}}>
+            <p style={{color:"rgba(255,255,255,0.82)", fontSize:13, lineHeight:1.7, margin:"0 0 20px"}}>
               A community of young Shia Muslims in Louisville, Kentucky — growing together in faith, knowledge, and community.
             </p>
             {/* Social buttons */}
@@ -395,7 +397,6 @@ export default function Sol() {
               letterSpacing:3, textTransform:"uppercase", margin:"0 0 18px"
             }}>Quick Links</p>
             {[
-              {label:"🏠 Back to Home",     href:"/home"},
               {label:"📖 Presentations",    href:"https://linktr.ee/shiaoflouisvilleyouth", external:true},
               {label:"❓ Ask a Question",   href:"https://forms.gle/hqSRBqfvkr3VHBrF7", external:true},
               {label:"💬 Send Feedback",    href:"https://forms.gle/XVq9RWaBi8hb8ozn7", external:true},
@@ -403,23 +404,23 @@ export default function Sol() {
             ].map(link => (
               link.external
                 ? <a key={link.label} href={link.href} target="_blank" rel="noreferrer" style={{
-                    display:"block", color:"rgba(255,255,255,0.6)", fontSize:13,
+                    display:"block", color:"rgba(255,255,255,0.88)", fontSize:13,
                     textDecoration:"none", padding:"5px 0",
-                    borderBottom:"1px solid rgba(255,255,255,0.06)",
+                    borderBottom:"1px solid rgba(255,255,255,0.1)",
                     transition:"color 0.15s",
                   }}
                   onMouseEnter={e=>e.currentTarget.style.color=SOL_GOLD}
-                  onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,0.6)"}
+                  onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,0.88)"}
                   >{link.label}</a>
                 : <button key={link.label} onClick={()=>window.dispatchEvent(new CustomEvent('sol-navigate',{detail:link.href}))}
                     style={{
                       display:"block", width:"100%", textAlign:"left",
-                      color:"rgba(255,255,255,0.6)", fontSize:13, background:"none",
-                      border:"none", borderBottom:"1px solid rgba(255,255,255,0.06)",
+                      color:"rgba(255,255,255,0.88)", fontSize:13, background:"none",
+                      border:"none", borderBottom:"1px solid rgba(255,255,255,0.1)",
                       padding:"5px 0", cursor:"pointer", transition:"color 0.15s",
                     }}
                     onMouseEnter={e=>e.currentTarget.style.color=SOL_GOLD}
-                    onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,0.6)"}
+                    onMouseLeave={e=>e.currentTarget.style.color="rgba(255,255,255,0.88)"}
                   >{link.label}</button>
             ))}
           </div>
@@ -434,7 +435,7 @@ export default function Sol() {
           display:"flex", alignItems:"center", justifyContent:"space-between",
           flexWrap:"wrap", gap:12,
         }}>
-          <p style={{color:"rgba(255,255,255,0.3)", fontSize:12, margin:0}}>
+          <p style={{color:"rgba(255,255,255,0.55)", fontSize:12, margin:0}}>
             © 2021 SOL Youth Group — Al Zahrah Islamic Center, Louisville KY
           </p>
         </div>

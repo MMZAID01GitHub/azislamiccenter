@@ -5,9 +5,7 @@ export default function Team(props) {
         <div className="space-y-12">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet our team</h2>
 
-          <ul
-            className="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0"
-          >
+          <ul className="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0">
             {props.data.team.map((person) => (
               <li key={person.name}>
                 <div className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
@@ -21,9 +19,6 @@ export default function Team(props) {
                         <p className="mosque-website__text--brand">{person.role}</p>
                         <p className="mosque-website__text--brand">{person.number}</p>
                       </div>
-                      {/* <div className="text-lg">
-                        <p className="text-gray-500">{person.bio}</p>
-                      </div> */}
                     </div>
                   </div>
                 </div>

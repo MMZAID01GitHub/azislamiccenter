@@ -49,7 +49,6 @@ const themeStyles = `
     background: #fff;
     border-radius: 20px;
     padding: 36px 32px;
-    border-left: 5px solid #1877f2;
   }
   .home-theme-wrap #FacebookSection h2 {
     color: ${MOSQUE_GREEN} !important;

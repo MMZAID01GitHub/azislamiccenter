@@ -6,7 +6,11 @@ export default function FacebookSection(props) {
   const [tab, setTab] = useState("facebook");
 
   return (
-    <div id="FacebookSection">
+    <div id="FacebookSection" style={{
+      borderLeft: `5px solid ${tab === "youtube" ? "#ff0000" : "#1877f2"}`,
+      transition: "border-color 0.3s ease",
+      borderRadius: 20,
+    }}>
 
       {/* Platform tabs */}
       <div style={{ display: "flex", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>

@@ -224,7 +224,17 @@ export default function Sol() {
             }}>
               <p style={{color:SOL_GOLD, fontWeight:800, fontSize:12, letterSpacing:2, textTransform:"uppercase", margin:"0 0 6px"}}>Zelle</p>
               <p style={{color:"#fff", fontWeight:700, fontSize:18, margin:"0 0 4px"}}>(502) 716-2649</p>
-              <p style={{color:"rgba(255,255,255,0.55)", fontSize:12, margin:0}}>Open your banking app → Zelle → Send Money</p>
+              <p style={{color:"rgba(255,255,255,0.55)", fontSize:12, margin:"0 0 14px"}}>Scan to send — or open Zelle in your banking app</p>
+              <div style={{display:"flex", justifyContent:"center"}}>
+                <img src="/zelle-qr.png" alt="Zelle QR code"
+                  style={{
+                    width:150, height:150, objectFit:"cover",
+                    borderRadius:12,
+                    border:`2px solid ${SOL_GOLD}55`,
+                    background:"#fff",
+                    padding:6
+                  }}/>
+              </div>
             </div>
 
             {/* Cash row */}

@@ -6,14 +6,10 @@ export default function FacebookSection(props) {
   const [tab, setTab] = useState("facebook");
 
   return (
-    <div id="FacebookSection" style={{
-      borderLeft: `5px solid ${tab === "youtube" ? "#ff0000" : "#1877f2"}`,
-      transition: "border-color 0.3s ease",
-      borderRadius: 20,
-    }}>
+    <div id="FacebookSection">
 
       {/* Platform tabs */}
-      <div style={{ display: "flex", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: 12, marginBottom: 24, flexWrap: "wrap" }}>
         {/* Facebook tab */}
         <button onClick={() => setTab("facebook")} style={{
           display: "flex", alignItems: "center", gap: 8,
@@ -45,12 +41,7 @@ export default function FacebookSection(props) {
         </button>
       </div>
 
-      {/* Active tab color bar */}
-      <div style={{
-        height: 3, borderRadius: 99, marginBottom: 20,
-        background: tab === "youtube" ? "#ff0000" : "#1877f2",
-        transition: "background 0.3s ease"
-      }} />
+      {/* Facebook panel */}
       {tab === "facebook" && (
         <div style={{ background: "#fff", borderRadius: 16, overflow: "hidden" }}>
           <div style={{

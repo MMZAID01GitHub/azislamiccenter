@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const INSTAGRAM_URL = "https://www.instagram.com/shiaoflouisville/";
 
@@ -27,6 +27,7 @@ const responsiveStyles = `
 `;
 
 export default function Sol() {
+  const [showDonateModal, setShowDonateModal] = useState(false);
 
   useEffect(() => {
     if (window.instgrm) {
@@ -156,7 +157,7 @@ export default function Sol() {
             Follow on Instagram ↗
           </a>
           <button
-            onClick={() => alert("💛 SOL Donations\n\nWe accept:\n• Zelle → (502) 716-2649\n• Cash\n\nOr contact our Treasurer directly for more info.")}
+            onClick={() => setShowDonateModal(true)}
             style={{
               display:"inline-flex", alignItems:"center", gap:8,
               background:`linear-gradient(135deg, ${SOL_GOLD}, #e8c96a)`,
@@ -165,13 +166,91 @@ export default function Sol() {
               border:"none", cursor:"pointer",
               boxShadow:"0 4px 16px rgba(201,168,76,0.35)"
             }}>
-            💛 SOL Donations
+            SOL Donations
           </button>
         </div>
 
         </div>{/* ▓▓▓ END FOREGROUND ▓▓▓ */}
 
       </div>{/* ── END HERO BANNER ── */}
+
+      {/* ── DONATE MODAL ── */}
+      {showDonateModal && (
+        <div
+          onClick={() => setShowDonateModal(false)}
+          style={{
+            position:"fixed", inset:0, zIndex:1000,
+            background:"rgba(0,0,0,0.65)", backdropFilter:"blur(4px)",
+            display:"flex", alignItems:"center", justifyContent:"center",
+            padding:"24px"
+          }}>
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{
+              background:`linear-gradient(160deg, #081910 0%, #0f2b1c 50%, ${SOL_GREEN} 100%)`,
+              border:`1.5px solid ${SOL_GOLD}55`,
+              borderRadius:20,
+              padding:"40px 36px 32px",
+              maxWidth:400, width:"100%",
+              boxShadow:"0 24px 64px rgba(0,0,0,0.55)",
+              position:"relative", textAlign:"center"
+            }}>
+            {/* Close button */}
+            <button
+              onClick={() => setShowDonateModal(false)}
+              style={{
+                position:"absolute", top:14, right:16,
+                background:"none", border:"none", cursor:"pointer",
+                color:"rgba(255,255,255,0.5)", fontSize:22, lineHeight:1
+              }}>✕</button>
+
+            {/* Gold divider top */}
+            <div style={{height:2, background:`linear-gradient(90deg, transparent, ${SOL_GOLD}, transparent)`, marginBottom:28}}/>
+
+            <p style={{color:SOL_GOLD, fontWeight:800, fontSize:11, letterSpacing:3, textTransform:"uppercase", margin:"0 0 10px"}}>
+              Support SOL
+            </p>
+            <h2 style={{color:"#fff", fontWeight:900, fontSize:22, margin:"0 0 6px"}}>SOL Donations</h2>
+            <p style={{color:"rgba(255,255,255,0.65)", fontSize:13, margin:"0 0 28px"}}>
+              Help us grow our community — every contribution counts.
+            </p>
+
+            {/* Zelle row */}
+            <div style={{
+              background:"rgba(255,255,255,0.06)", border:`1px solid ${SOL_GOLD}40`,
+              borderRadius:12, padding:"18px 20px", marginBottom:12, textAlign:"left"
+            }}>
+              <p style={{color:SOL_GOLD, fontWeight:800, fontSize:12, letterSpacing:2, textTransform:"uppercase", margin:"0 0 6px"}}>Zelle</p>
+              <p style={{color:"#fff", fontWeight:700, fontSize:18, margin:"0 0 4px"}}>(502) 716-2649</p>
+              <p style={{color:"rgba(255,255,255,0.55)", fontSize:12, margin:0}}>Open your banking app → Zelle → Send Money</p>
+            </div>
+
+            {/* Cash row */}
+            <div style={{
+              background:"rgba(255,255,255,0.06)", border:`1px solid ${SOL_GOLD}40`,
+              borderRadius:12, padding:"18px 20px", marginBottom:24, textAlign:"left"
+            }}>
+              <p style={{color:SOL_GOLD, fontWeight:800, fontSize:12, letterSpacing:2, textTransform:"uppercase", margin:"0 0 6px"}}>Cash</p>
+              <p style={{color:"rgba(255,255,255,0.8)", fontSize:14, margin:0}}>Contact our Treasurer directly to donate in person.</p>
+            </div>
+
+            {/* Gold divider bottom */}
+            <div style={{height:1, background:`linear-gradient(90deg, transparent, ${SOL_GOLD}40, transparent)`, marginBottom:20}}/>
+
+            <button
+              onClick={() => setShowDonateModal(false)}
+              style={{
+                background:`linear-gradient(135deg, ${SOL_GOLD}, #e8c96a)`,
+                color:SOL_GREEN, fontWeight:800, fontSize:14,
+                padding:"11px 36px", borderRadius:100,
+                border:"none", cursor:"pointer",
+                boxShadow:"0 4px 16px rgba(201,168,76,0.35)"
+              }}>
+              Got it
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* ── ABOUT SECTION ── */}
       <div style={{ background:"#f5f5f0", padding:"56px 24px" }}>

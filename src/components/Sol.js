@@ -490,7 +490,7 @@ export default function Sol() {
                   border:"none", cursor:"pointer",
                   boxShadow:"0 4px 16px rgba(201,168,76,0.25)"
                 }}>
-                💰 Donate
+                Donate
               </button>
             </div>
           </div>

@@ -156,11 +156,7 @@ export default function Sol() {
             Follow on Instagram ↗
           </a>
           <button
-            onClick={() => alert("💛 SOL Donations via Zelle!
-
-Send to: (502) 716-2649
-
-Open your banking app → Zelle → Send Money")}
+            onClick={() => alert("\ud83d\udc9b SOL Donations via Zelle!\nSend to: (502) 716-2649\nOpen your banking app \u2192 Zelle \u2192 Send Money")}
             style={{
               display:"inline-flex", alignItems:"center", gap:8,
               background:`linear-gradient(135deg, ${SOL_GOLD}, #e8c96a)`,

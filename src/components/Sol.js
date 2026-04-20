@@ -155,6 +155,16 @@ export default function Sol() {
             }}>
             Follow on Instagram ↗
           </a>
+          <a href="https://zelle.com/enroll?phone=5027162649" target="_blank" rel="noreferrer"
+            style={{
+              display:"inline-flex", alignItems:"center", gap:8,
+              background:"linear-gradient(135deg, #6B21A8, #9333ea)",
+              color:"#fff", fontWeight:700, fontSize:14,
+              padding:"11px 30px", borderRadius:100, textDecoration:"none",
+              boxShadow:"0 4px 16px rgba(147,51,234,0.35)"
+            }}>
+            💜 Donate via Zelle
+          </a>
         </div>
 
         </div>{/* ▓▓▓ END FOREGROUND ▓▓▓ */}

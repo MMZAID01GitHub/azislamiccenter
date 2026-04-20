@@ -9,7 +9,9 @@ const responsiveStyles = `
   .sol-hero { padding: 56px 24px 52px; }
   .sol-hero-title { font-size: 36px; font-weight: 900; color: #fff; margin: 0 0 6px; letter-spacing: 1px; }
   .sol-about-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 40px; }
-  .sol-instagram-wrap { padding: 0 16px; }
+  .sol-instagram-wrap { padding                >
+                Donate
+              </button> 16px; }
   .sol-links-card { padding: 32px 24px; max-width: 500px; }
 
   @media (max-width: 900px) {

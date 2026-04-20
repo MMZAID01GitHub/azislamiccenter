@@ -183,8 +183,9 @@ export default function Sol() {
           style={{
             position:"fixed", inset:0, zIndex:1000,
             background:"rgba(0,0,0,0.65)", backdropFilter:"blur(4px)",
-            display:"flex", alignItems:"center", justifyContent:"center",
-            padding:"24px"
+            display:"flex", alignItems:"flex-start", justifyContent:"center",
+            padding:"16px",
+            overflowY:"auto",
           }}>
           <div
             onClick={e => e.stopPropagation()}
@@ -192,10 +193,12 @@ export default function Sol() {
               background:`linear-gradient(160deg, #081910 0%, #0f2b1c 50%, ${SOL_GREEN} 100%)`,
               border:`1.5px solid ${SOL_GOLD}55`,
               borderRadius:20,
-              padding:"40px 36px 32px",
-              maxWidth:400, width:"100%",
+              padding:"36px 20px 28px",
+              maxWidth:420, width:"100%",
+              marginTop:"auto", marginBottom:"auto",
               boxShadow:"0 24px 64px rgba(0,0,0,0.55)",
-              position:"relative", textAlign:"center"
+              position:"relative", textAlign:"center",
+              boxSizing:"border-box",
             }}>
             {/* Close button */}
             <button
@@ -207,20 +210,20 @@ export default function Sol() {
               }}>✕</button>
 
             {/* Gold divider top */}
-            <div style={{height:2, background:`linear-gradient(90deg, transparent, ${SOL_GOLD}, transparent)`, marginBottom:28}}/>
+            <div style={{height:2, background:`linear-gradient(90deg, transparent, ${SOL_GOLD}, transparent)`, marginBottom:24}}/>
 
-            <p style={{color:SOL_GOLD, fontWeight:800, fontSize:11, letterSpacing:3, textTransform:"uppercase", margin:"0 0 10px"}}>
+            <p style={{color:SOL_GOLD, fontWeight:800, fontSize:11, letterSpacing:3, textTransform:"uppercase", margin:"0 0 8px"}}>
               Support SOL
             </p>
-            <h2 style={{color:"#fff", fontWeight:900, fontSize:22, margin:"0 0 6px"}}>SOL Donations</h2>
-            <p style={{color:"rgba(255,255,255,0.65)", fontSize:13, margin:"0 0 28px"}}>
+            <h2 style={{color:"#fff", fontWeight:900, fontSize:20, margin:"0 0 6px"}}>SOL Donations</h2>
+            <p style={{color:"rgba(255,255,255,0.65)", fontSize:13, margin:"0 0 22px"}}>
               Help us grow our community — every contribution counts.
             </p>
 
             {/* Zelle row */}
             <div style={{
               background:"rgba(255,255,255,0.06)", border:`1px solid ${SOL_GOLD}40`,
-              borderRadius:12, padding:"18px 20px", marginBottom:12, textAlign:"left"
+              borderRadius:12, padding:"16px", marginBottom:12, textAlign:"left"
             }}>
               <p style={{color:SOL_GOLD, fontWeight:800, fontSize:12, letterSpacing:2, textTransform:"uppercase", margin:"0 0 6px"}}>Zelle</p>
               <p style={{color:"#fff", fontWeight:700, fontSize:18, margin:"0 0 4px"}}>(502) 716-2649</p>
@@ -228,7 +231,8 @@ export default function Sol() {
               <div style={{display:"flex", justifyContent:"center"}}>
                 <img src="/zelle-qr.png" alt="Zelle QR code"
                   style={{
-                    width:260, height:260, objectFit:"cover",
+                    width:"min(240px, 80vw)", height:"min(240px, 80vw)",
+                    objectFit:"cover",
                     borderRadius:12,
                     border:`2px solid ${SOL_GOLD}55`,
                     background:"#fff",
@@ -240,7 +244,7 @@ export default function Sol() {
             {/* Cash row */}
             <div style={{
               background:"rgba(255,255,255,0.06)", border:`1px solid ${SOL_GOLD}40`,
-              borderRadius:12, padding:"18px 20px", marginBottom:24, textAlign:"left"
+              borderRadius:12, padding:"16px", marginBottom:22, textAlign:"left"
             }}>
               <p style={{color:SOL_GOLD, fontWeight:800, fontSize:12, letterSpacing:2, textTransform:"uppercase", margin:"0 0 6px"}}>Cash</p>
               <p style={{color:"rgba(255,255,255,0.8)", fontSize:14, margin:0}}>Contact our Treasurer directly to donate in person.</p>

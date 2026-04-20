@@ -158,12 +158,13 @@ export default function Sol() {
           <a href="https://zelle.com/enroll?phone=5027162649" target="_blank" rel="noreferrer"
             style={{
               display:"inline-flex", alignItems:"center", gap:8,
-              background:"linear-gradient(135deg, #6B21A8, #9333ea)",
-              color:"#fff", fontWeight:700, fontSize:14,
+              background:"rgba(255,255,255,0.12)",
+              border:`2px solid ${SOL_GOLD}`,
+              color:SOL_GOLD, fontWeight:700, fontSize:14,
               padding:"11px 30px", borderRadius:100, textDecoration:"none",
-              boxShadow:"0 4px 16px rgba(147,51,234,0.35)"
+              boxShadow:"0 4px 16px rgba(201,168,76,0.2)"
             }}>
-            💜 Donate via Zelle
+            � SOL Donations
           </a>
         </div>
 

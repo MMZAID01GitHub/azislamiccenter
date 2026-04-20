@@ -478,6 +478,18 @@ export default function Sol() {
                 color:SOL_GOLD, fontWeight:700, fontSize:12,
                 padding:"7px 16px", borderRadius:100, textDecoration:"none",
               }}>✉️ Email Us</a>
+              <button
+                onClick={() => setShowDonateModal(true)}
+                style={{
+                  display:"inline-flex", alignItems:"center", gap:6,
+                  background:`linear-gradient(135deg, ${SOL_GOLD}, #e8c96a)`,
+                  color:SOL_GREEN, fontWeight:700, fontSize:12,
+                  padding:"7px 16px", borderRadius:100,
+                  border:"none", cursor:"pointer",
+                  boxShadow:"0 4px 16px rgba(201,168,76,0.25)"
+                }}>
+                💰 Donate
+              </button>
             </div>
           </div>
 

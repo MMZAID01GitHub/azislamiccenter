@@ -228,7 +228,7 @@ export default function Sol() {
               <div style={{display:"flex", justifyContent:"center"}}>
                 <img src="/zelle-qr.png" alt="Zelle QR code"
                   style={{
-                    width:150, height:150, objectFit:"cover",
+                    width:220, height:220, objectFit:"cover",
                     borderRadius:12,
                     border:`2px solid ${SOL_GOLD}55`,
                     background:"#fff",

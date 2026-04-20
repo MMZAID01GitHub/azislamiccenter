@@ -155,17 +155,22 @@ export default function Sol() {
             }}>
             Follow on Instagram ↗
           </a>
-          <a href="https://zelle.com/enroll?phone=5027162649" target="_blank" rel="noreferrer"
+          <button
+            onClick={() => alert("💛 SOL Donations via Zelle!
+
+Send to: (502) 716-2649
+
+Open your banking app → Zelle → Send Money")}
             style={{
               display:"inline-flex", alignItems:"center", gap:8,
-              background:"rgba(255,255,255,0.12)",
-              border:`2px solid ${SOL_GOLD}`,
-              color:SOL_GOLD, fontWeight:700, fontSize:14,
-              padding:"11px 30px", borderRadius:100, textDecoration:"none",
-              boxShadow:"0 4px 16px rgba(201,168,76,0.2)"
+              background:`linear-gradient(135deg, ${SOL_GOLD}, #e8c96a)`,
+              color:SOL_GREEN, fontWeight:700, fontSize:14,
+              padding:"11px 30px", borderRadius:100,
+              border:"none", cursor:"pointer",
+              boxShadow:"0 4px 16px rgba(201,168,76,0.35)"
             }}>
-            � SOL Donations
-          </a>
+            💛 SOL Donations
+          </button>
         </div>
 
         </div>{/* ▓▓▓ END FOREGROUND ▓▓▓ */}

@@ -6,6 +6,15 @@ on:
       - main
       - updated-the-website
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: build-deploy-pages-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest

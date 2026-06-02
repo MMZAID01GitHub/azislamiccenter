@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import feed from "../data/facebook-feed.json";
 
 const YOUTUBE_URL = "https://www.youtube.com/@al-zahrahislamiccenterkyus";
 
 export default function FacebookSection(props) {
   const [tab, setTab] = useState("facebook");
+  const [iframeError, setIframeError] = useState(false);
   const data = props?.data || {};
   const fb = data.facebook || {};
 
@@ -45,7 +47,7 @@ export default function FacebookSection(props) {
           Facebook
         </button>
 
-        {/* YouTube tab */}
+  {/* YouTube tab */}
         <button onClick={() => setTab("youtube")} style={{
           display: "flex", alignItems: "center", gap: 8,
           background: tab === "youtube" ? "#ff0000" : "rgba(0,0,0,0.06)",
@@ -58,6 +60,21 @@ export default function FacebookSection(props) {
             <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
           </svg>
           YouTube
+        </button>
+
+        {/* Public updates (fallback) tab */}
+        <button onClick={() => setTab("public")} style={{
+          display: "flex", alignItems: "center", gap: 8,
+          background: tab === "public" ? "#0f766e" : "rgba(0,0,0,0.06)",
+          color: tab === "public" ? "#fff" : "#555",
+          padding: "8px 18px", borderRadius: 100,
+          fontWeight: 700, fontSize: 14, border: "none", cursor: "pointer",
+          transition: "all 0.2s"
+        }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 14h-2v-2h2v2zm0-4h-2V6h2v6z"/>
+          </svg>
+          Public updates
         </button>
       </div>
 
@@ -82,14 +99,58 @@ export default function FacebookSection(props) {
             </a>
           </div>
           <div style={{ display: "flex", justifyContent: "center", padding: "20px 0 8px" }}>
-            <iframe
-              src={fbPluginUrl}
-              width="370" height="500"
-              style={{ border: "none", overflow: "hidden", maxWidth: "100%" }}
-              scrolling="no" frameBorder="0" allowFullScreen={true}
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              title={`${displayName} Facebook Page`}
-            />
+            {!iframeError ? (
+              <iframe
+                src={fbPluginUrl}
+                width="370" height="500"
+                style={{ border: "none", overflow: "hidden", maxWidth: "100%" }}
+                scrolling="no" frameBorder="0" allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title={`${displayName} Facebook Page`}
+                onError={() => setIframeError(true)}
+              />
+            ) : (
+              <div style={{ maxWidth: 780, padding: 20 }}>
+                <h3 style={{ marginTop: 0 }}>Public updates from {displayName}</h3>
+                <p style={{ color: "#666" }}>We couldn't load the Facebook widget — here's a summary of recent public posts for visitors without Facebook.</p>
+                <div style={{ display: "grid", gap: 12, marginTop: 12 }}>
+                  {feed.map(item => (
+                    <a key={item.id} href={item.link} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none", color: "inherit", border: "1px solid #eee", padding: 12, borderRadius: 8 }}>
+                      <div style={{ display: "flex", gap: 12 }}>
+                        {item.image && <img src={item.image} alt="" style={{ width: 92, height: 64, objectFit: "cover", borderRadius: 6 }} />}
+                        <div>
+                          <div style={{ fontSize: 13, color: "#999" }}>{item.date}</div>
+                          <div style={{ fontWeight: 800, marginTop: 6 }}>{item.title}</div>
+                          <div style={{ color: "#444", marginTop: 6 }}>{item.body}</div>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Public updates panel (explicit tab) */}
+      {tab === "public" && (
+        <div style={{ background: "#fff", borderRadius: 16, overflow: "hidden", padding: 20 }}>
+          <h3 style={{ marginTop: 0 }}>Public updates from {displayName}</h3>
+          <p style={{ color: "#666" }}>If you don't have Facebook, you can still read recent public posts here.</p>
+          <div style={{ display: "grid", gap: 12, marginTop: 12 }}>
+            {feed.map(item => (
+              <a key={item.id} href={item.link} target="_blank" rel="noreferrer" style={{ display: "block", textDecoration: "none", color: "inherit", border: "1px solid #eee", padding: 12, borderRadius: 8 }}>
+                <div style={{ display: "flex", gap: 12 }}>
+                  {item.image && <img src={item.image} alt="" style={{ width: 92, height: 64, objectFit: "cover", borderRadius: 6 }} />}
+                  <div>
+                    <div style={{ fontSize: 13, color: "#999" }}>{item.date}</div>
+                    <div style={{ fontWeight: 800, marginTop: 6 }}>{item.title}</div>
+                    <div style={{ color: "#444", marginTop: 6 }}>{item.body}</div>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       )}

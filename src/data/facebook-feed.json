@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "date": "2026-05-30",
+    "title": "Community Iftar & Family Night",
+    "body": "Join us for a community iftar and family night at the center. All are welcome — food will be provided.",
+    "image": "./events/bbq.jpg",
+    "link": "https://www.facebook.com/AlzahrahIslamicCenterKYUS/posts/1"
+  },
+  {
+    "id": "2",
+    "date": "2026-05-10",
+    "title": "Weekly Lecture Series",
+    "body": "Our weekly lecture series continues every Wednesday after Maghrib. Tonight's topic: The Spirit of Community.",
+    "image": "./events/dhikr.png",
+    "link": "https://www.facebook.com/AlzahrahIslamicCenterKYUS/posts/2"
+  }
+]

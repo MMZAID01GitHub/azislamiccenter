@@ -23,7 +23,6 @@
     "react-ga": "^3.3.1",
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.2",
-    "react-onesignal": "^3.5.4",
     "react-scripts": "5.0.1",
     "react-social-media-embed": "^2.5.18",
     "tailwindcss": "^3.2.1",

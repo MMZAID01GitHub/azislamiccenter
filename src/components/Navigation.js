@@ -4,14 +4,13 @@ import HeroText from './HeroText'
 import OtherBanners from './OtherBanners'
 import ReactGA from "react-ga";
 
-// Helper — works with OneSignal v16 (Notifications namespace) and older fallbacks
+// Helper — uses the OneSignal v16 deferred queue (loaded via CDN in index.html)
 function requestOneSignalPermission() {
   try {
-    if (window.OneSignal?.Notifications?.requestPermission) {
-      window.OneSignal.Notifications.requestPermission();
-    } else if (window.OneSignal?.push) {
-      window.OneSignal.push(() => window.OneSignal.registerForPushNotifications());
-    }
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    window.OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.Notifications.requestPermission();
+    });
   } catch (e) {
     console.warn("OneSignal permission request failed:", e);
   }

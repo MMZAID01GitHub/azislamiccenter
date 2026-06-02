@@ -132,7 +132,9 @@ export default function Footer({ data, showContact = false }) {
                 }}>
                 ✉️ {email}
               </a>
-              <a href="https://www.facebook.com/Alzaharah/" target="_blank" rel="noreferrer"
+              <a href={data?.facebook?.link || (() => {
+                try { const u = new URL(data?.facebook?.url); const h = u.searchParams.get('href'); return h ? decodeURIComponent(h) : data?.facebook?.link || '#'; } catch(e) { return data?.facebook?.link || '#'; }
+              })()} target="_blank" rel="noreferrer"
                 style={{
                   display: "inline-flex", alignItems: "center", gap: 7,
                   background: "#1877f2", color: "#fff", fontWeight: 600,

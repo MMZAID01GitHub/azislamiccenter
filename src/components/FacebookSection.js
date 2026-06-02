@@ -4,6 +4,26 @@ const YOUTUBE_URL = "https://www.youtube.com/@al-zahrahislamiccenterkyus";
 
 export default function FacebookSection(props) {
   const [tab, setTab] = useState("facebook");
+  const data = props?.data || {};
+  const fb = data.facebook || {};
+
+  // Plugin iframe URL (can be the full plugins/page.php URL) or fallback
+  const fbPluginUrl = fb.url || "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAlzaharah%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true";
+
+  // Try to derive the public page URL to use for the Follow link. Fallback to a sane default.
+  let pageHref = fb.link || fb.page || "";
+  try {
+    const parsed = new URL(fbPluginUrl);
+    const hrefParam = parsed.searchParams.get('href');
+    if (hrefParam) pageHref = decodeURIComponent(hrefParam);
+  } catch (e) {
+    // ignore URL parsing errors and use provided page/link or fallback below
+  }
+  if (!pageHref) {
+    pageHref = "https://www.facebook.com/Alzaharah/";
+  }
+
+  const displayName = data.name || 'Al Zahrah Islamic Center';
 
   return (
     <div id="FacebookSection">
@@ -51,8 +71,8 @@ export default function FacebookSection(props) {
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
               <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
             </svg>
-            <span style={{ color: "#fff", fontWeight: 700, fontSize: 15 }}>Al Zahrah Islamic Center</span>
-            <a href="https://www.facebook.com/Alzaharah/" target="_blank" rel="noreferrer"
+            <span style={{ color: "#fff", fontWeight: 700, fontSize: 15 }}>{displayName}</span>
+            <a href={pageHref} target="_blank" rel="noreferrer"
               style={{
                 marginLeft: "auto", color: "#fff", fontSize: 12, fontWeight: 600,
                 background: "rgba(255,255,255,0.2)", padding: "4px 12px",
@@ -63,12 +83,12 @@ export default function FacebookSection(props) {
           </div>
           <div style={{ display: "flex", justifyContent: "center", padding: "20px 0 8px" }}>
             <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAlzaharah%2F&tabs=timeline&width=370&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              src={fbPluginUrl}
               width="370" height="500"
               style={{ border: "none", overflow: "hidden", maxWidth: "100%" }}
               scrolling="no" frameBorder="0" allowFullScreen={true}
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              title="Al Zahrah Facebook Page"
+              title={`${displayName} Facebook Page`}
             />
           </div>
         </div>
@@ -84,7 +104,7 @@ export default function FacebookSection(props) {
             <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
               <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
             </svg>
-            <span style={{ color: "#fff", fontWeight: 700, fontSize: 15 }}>Al Zahrah Islamic Center</span>
+            <span style={{ color: "#fff", fontWeight: 700, fontSize: 15 }}>{displayName}</span>
             <a href={YOUTUBE_URL} target="_blank" rel="noreferrer"
               style={{
                 marginLeft: "auto", color: "#fff", fontSize: 12, fontWeight: 600,

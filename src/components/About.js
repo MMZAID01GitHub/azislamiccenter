@@ -18,7 +18,9 @@ export default function About(props) {
             <p style={{ color:"#374151", fontSize:14, lineHeight:1.7, margin:"0 0 28px", textAlign:"center" }}>
               For more information about our regular programs and events, please visit our{" "}
               <a
-                href="https://www.facebook.com/Alzaharah/"
+                href={props.data?.facebook?.link || (() => {
+                  try { const u = new URL(props.data?.facebook?.url); const h = u.searchParams.get('href'); return h ? decodeURIComponent(h) : props.data?.facebook?.link || '#'; } catch(e) { return props.data?.facebook?.link || '#'; }
+                })()}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color:GREEN, fontWeight:700, textDecoration:"none", borderBottom:`1.5px solid ${GOLD}` }}

@@ -5,12 +5,42 @@ import OtherBanners from './OtherBanners'
 import ReactGA from "react-ga";
 import OneSignal from "react-onesignal";
 
+// Helper — works with OneSignal v16 (Notifications namespace) and older fallbacks
+function requestOneSignalPermission() {
+  try {
+    if (window.OneSignal?.Notifications?.requestPermission) {
+      window.OneSignal.Notifications.requestPermission();
+    } else if (window.OneSignal?.push) {
+      window.OneSignal.push(() => window.OneSignal.registerForPushNotifications());
+    }
+  } catch (e) {
+    console.warn("OneSignal permission request failed:", e);
+  }
+}
+
 class Navigation extends Component {
 
   constructor(props) {
     super(props);
-    this.state = this.props.data;
-    this.state.showBanner = this.props.showBanner;
+    this.state = {
+      ...this.props.data,
+      showBanner: this.props.showBanner,
+      notifSubscribed: false,
+    };
+  }
+
+  componentDidMount() {
+    // Listen for subscription changes so the button updates live
+    try {
+      if (window.OneSignal?.User?.PushSubscription) {
+        window.OneSignal.User.PushSubscription.addEventListener("change", (event) => {
+          this.setState({ notifSubscribed: !!event?.current?.isSubscribed });
+        });
+        // Check current state
+        const isSubscribed = window.OneSignal.User.PushSubscription.optedIn;
+        if (isSubscribed) this.setState({ notifSubscribed: true });
+      }
+    } catch (_) {}
   }
 
   useAnalyticsEventTracker = (category="Blog category") => {
@@ -146,32 +176,38 @@ class Navigation extends Component {
 
               {/* OneSignal — Get Notified bell button */}
               <li>
-                <button
-                  onClick={() => {
-                    if (typeof OneSignal !== "undefined" && OneSignal.Notifications) {
-                      OneSignal.Notifications.requestPermission();
-                    }
-                  }}
-                  title="Get event notifications"
-                  style={{
-                    background: "rgba(201,168,76,0.18)",
-                    border: "1px solid rgba(201,168,76,0.5)",
-                    color: "#c9a84c",
+                {this.state.notifSubscribed ? (
+                  <span style={{
+                    display: "flex", alignItems: "center", gap: 5,
+                    background: "rgba(34,197,94,0.15)",
+                    border: "1px solid rgba(34,197,94,0.4)",
+                    color: "#4ade80",
                     fontWeight: 700, fontSize: 13,
                     padding: "6px 14px", borderRadius: 100,
-                    cursor: "pointer", whiteSpace: "nowrap",
-                    display: "flex", alignItems: "center", gap: 5,
-                    transition: "all 0.15s ease",
-                  }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background = "rgba(201,168,76,0.32)";
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background = "rgba(201,168,76,0.18)";
-                  }}
-                >
-                  🔔 Get Notified
-                </button>
+                    whiteSpace: "nowrap",
+                  }}>
+                    ✅ Subscribed
+                  </span>
+                ) : (
+                  <button
+                    onClick={requestOneSignalPermission}
+                    title="Get instant event notifications on this device — no account needed"
+                    style={{
+                      background: "rgba(201,168,76,0.18)",
+                      border: "1px solid rgba(201,168,76,0.5)",
+                      color: "#c9a84c",
+                      fontWeight: 700, fontSize: 13,
+                      padding: "6px 14px", borderRadius: 100,
+                      cursor: "pointer", whiteSpace: "nowrap",
+                      display: "flex", alignItems: "center", gap: 5,
+                      transition: "all 0.15s ease",
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.background = "rgba(201,168,76,0.32)"; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = "rgba(201,168,76,0.18)"; }}
+                  >
+                    🔔 Get Notified
+                  </button>
+                )}
               </li>
             </ul>
 

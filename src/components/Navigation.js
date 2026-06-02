@@ -3,6 +3,7 @@ import HeroBanner from './HeroBanner'
 import HeroText from './HeroText'
 import OtherBanners from './OtherBanners'
 import ReactGA from "react-ga";
+import OneSignal from "react-onesignal";
 
 class Navigation extends Component {
 
@@ -142,6 +143,36 @@ class Navigation extends Component {
                   </li>
                 );
               })}
+
+              {/* OneSignal — Get Notified bell button */}
+              <li>
+                <button
+                  onClick={() => {
+                    if (typeof OneSignal !== "undefined" && OneSignal.Notifications) {
+                      OneSignal.Notifications.requestPermission();
+                    }
+                  }}
+                  title="Get event notifications"
+                  style={{
+                    background: "rgba(201,168,76,0.18)",
+                    border: "1px solid rgba(201,168,76,0.5)",
+                    color: "#c9a84c",
+                    fontWeight: 700, fontSize: 13,
+                    padding: "6px 14px", borderRadius: 100,
+                    cursor: "pointer", whiteSpace: "nowrap",
+                    display: "flex", alignItems: "center", gap: 5,
+                    transition: "all 0.15s ease",
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = "rgba(201,168,76,0.32)";
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = "rgba(201,168,76,0.18)";
+                  }}
+                >
+                  🔔 Get Notified
+                </button>
+              </li>
             </ul>
 
           </div>

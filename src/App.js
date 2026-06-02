@@ -5,6 +5,7 @@
 import { Helmet } from 'react-helmet';
 import Navigation from './components/Navigation'
 import MosqueBrandingCSS from './components/MoqueBrandingCSS'
+import OneSignalInit from './components/OneSignalInit'
 import Sol from './components/Sol'
 import HomeTheme from './components/HomeTheme'
 import ContentSection from './components/ContentSection'
@@ -38,6 +39,7 @@ class App extends Component {
     // let data = this.state
     return (
       <div className="App">
+      <OneSignalInit />
       <Helmet>
         <title>{this.state.name} - Mosque Website</title>
         <GoogleAnalytics />

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import feed from "../data/facebook-feed.json";
 
 const YOUTUBE_URL = "https://www.youtube.com/@al-zahrahislamiccenterkyus";

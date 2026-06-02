@@ -3,7 +3,6 @@ import HeroBanner from './HeroBanner'
 import HeroText from './HeroText'
 import OtherBanners from './OtherBanners'
 import ReactGA from "react-ga";
-import OneSignal from "react-onesignal";
 
 // Helper — works with OneSignal v16 (Notifications namespace) and older fallbacks
 function requestOneSignalPermission() {
